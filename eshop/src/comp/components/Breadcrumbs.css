@@ -1,0 +1,19 @@
+.breadcrumbs {
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.breadcrumbs a {
+    color: #0275d8; /* Blå länkfärg */
+    text-decoration: none;
+}
+
+.breadcrumbs a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumbs span {
+    color: #555; /* Mörkare grå färg för aktuell sida */
+}
