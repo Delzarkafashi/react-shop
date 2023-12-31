@@ -5,7 +5,8 @@ import Homeproduct from "./home_product";
 import { AiFillEye, AiFillHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter, BiLogoYoutube } from "react-icons/bi";
 import DetailPage from "./components/DetailPage";
-const Home = ({addtocart}) => {
+import ImageSlider from "./components/ImageSlider";
+const Home = ({addtocart,}) => {
     //product category
     const [newProduct, setNewProduct] = useState([])
     const [featuredProduct, setFeaturdProduct] = useState([])
@@ -89,6 +90,7 @@ const Home = ({addtocart}) => {
 
 
         <div className="home">
+            <div><ImageSlider /></div>
             <div className="top_banner">
                   <dir className = "contant">
                   <h3>silver aluminum</h3>
