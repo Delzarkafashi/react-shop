@@ -45,24 +45,6 @@ const App = () => {
     
    }
   }
-  //Add To cart
-  // const addtocart = (product) => {
-  //   console.log("Produkt som försöker läggas till:", product);
-  
-  //   // Antag att dina produktobjekt har ett fält som heter "Id"
-  //   const exist = cart.find((x) => x.Id === product.Id);
-  
-  //   console.log("Finns produkten redan i kundvagnen?", exist);
-  
-  //   if (exist) {
-  //     alert("This product is already added in cart");
-  //   } else {
-  //     const newCart = [...cart, { ...product, qty: 1 }];
-  //     setCart(newCart);
-  //     console.log("Ny kundvagn efter att ha lagt till produkt:", newCart);
-  //     alert("Added to cart");
-  //   }
-  // };
   
   const addtocart = (product) =>
   {
