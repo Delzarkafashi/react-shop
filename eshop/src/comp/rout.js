@@ -4,7 +4,6 @@ import Home from "./home";
 import Shop from "./shop";
 import Cart from "./cart";
 import Contact from "./contact";
-import TV from "./cata.js/tv";
 
 const Rout = ({shop, Filter, allcateFilter, addtocart, cart, setCart}) =>{
     return (
@@ -15,7 +14,6 @@ const Rout = ({shop, Filter, allcateFilter, addtocart, cart, setCart}) =>{
            <Route path="shop" element={<Shop shop={shop} Filter ={Filter} allcateFilter={allcateFilter} addtocart={addtocart}/>} />
            <Route path="/contact" element={<Contact />}/>
 
-           <Route path="/tv" element={<TV shop={shop} handleDetail={handleDetail} addtocart={addtocart}/>}/>
         </Routes> 
         </>
     )
