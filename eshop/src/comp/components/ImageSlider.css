@@ -1,0 +1,80 @@
+.slider {
+    position: relative;
+    width: 90%;
+    height: 500px; /* Höjd för slidern */
+    margin: 0 auto; /* Centrerar slidern */
+    overflow: hidden; /* Döljer icke-aktiva slides */
+    align-items: center; /* Centrerar innehåll vertikalt */
+    justify-content: center; /* Centrerar innehåll horisontellt */
+    transition: opacity 1s ease; /* Animering för att visa/ta bort slides */
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.left-arrow, .right-arrow {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+    font-size: 48px; /* Storlek på pilen */
+    z-index: 10;
+    color: black; /* Färg på pilen */
+    transform: translateY(-50%) scaleY(1.5);
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%; /* Gör bakgrunden helt rund */
+    padding: 15px; /* Lägger till utrymme runt ikonen */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.0); /* Valfrivis skugga för bättre djup */
+    
+    /* Centrera innehållet (pilen) inuti elementet */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Lägg till bredd och höjd för att kontrollera storleken på den runda bakgrunden */
+    width: 80px;
+    height: 80px;
+}
+
+
+
+.left-arrow {
+    left: 10px;
+    color: violet;
+}
+
+.right-arrow {
+    right: 10px;
+    color: violet;
+}
+
+.slide {
+    width: 100%; /* Varje slide fyller hela bredden */
+    height: 100%; /* Höjd för varje slide */
+    position: absolute; /* Positioneras ovanpå varandra */
+    opacity: 0; /* Döljer alla slides som standard */
+    transition: opacity 1s ease; /* Animering för att visa/ta bort slides */
+}
+
+.slide.active {
+    opacity: 1; /* Visar den aktiva sliden */
+}
+
+.image {
+    width: 100%; /* Bildens bredd */
+    height: 450px; /* Bildens höjd */
+    object-fit: cover; /* Ser till att bilden täcker området utan att tappa proportioner */
+}
+.slide-text {
+    position: absolute;
+    top: 80%; /* Centrera vertikalt i förhållande till höjden */
+    left: 50%; /* Centrera horisontellt i förhållande till bredden */
+    transform: translate(-50%, -50%); /* Justerar exakt centrumpositionen */
+    color: white; /* Eller vilken färg du föredrar */
+    background-color: rgba(0, 0, 0, 0.5); /* Halvgenomskinlig svart bakgrund */
+    padding: 10px;
+    cursor: pointer; /* Visar en pekare för att indikera klickbarhet */
+    border-radius: 5px; /* Ger rundade hörn om så önskas */
+    text-align: center; /* Centrerar texten inom elementet */
+    /* Lägg till ytterligare styling efter behov */
+    z-index: 11;
+}
+

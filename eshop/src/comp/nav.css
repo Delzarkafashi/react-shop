@@ -93,7 +93,7 @@
     display: flex;
     background: #232323;
     justify-content: space-between;
-    height: 70px;
+    height: 80px;
 }
 .header .last_header .user_profile
 {
@@ -105,6 +105,7 @@
     padding: 10px 10px;
     background: #fff;
     border-radius: 10px;
+    height: 40px;
 }
 .header .last_header .user_profile .info
 {
@@ -119,6 +120,7 @@
 {
     color: #ababab;
     font-size: 14px;
+    padding-top: 10px;
 }
 .header .last_header .nav
 {
@@ -144,6 +146,10 @@
 {
     color: #fed700;
 }
+.header .last_header .nav ul li .link.active {
+    color: #fed700;
+}
+
 .header .last_header .offer
 {
     margin-right: 20px;
@@ -160,3 +166,12 @@
     font-size: 14px;
 
 }
+/* header nav a.active {
+    background-color: #555;
+      margin: auto;
+  }
+
+  header nav a:hover {
+    background-color: #777;
+    margin: auto;
+} */
