@@ -94,6 +94,26 @@ const Homeproduct =
         image: "image/p12.jpg",
         cat: "speaker",
         type: "top",
+    },
+    {
+        Id: 14,
+        Name: "product14",
+        price: "807",
+        image: "S-tv-img.jpg",
+        cat: "shop",
+        type: "slider",
+        info: "If you're in the market for a new TV, it's essential to consider if the features match your needs. Think about if the size, resolution, and smart capabilities align with your viewing preferences. Also, if energy efficiency and connectivity options are important, ensure the TV supports them. Lastly, if the price fits your budget, it might be the right choice.",
+    },
+    {
+        Id: 15,
+        Name: "product14",
+        price: "807",
+        image: "S-tv-img.jpg",
+        cat: "cart",
+        type: "slider",
+        info: "If you're in the market for a new TV, it's essential to consider if the features match your needs. Think about if the size, resolution, and smart capabilities align with your viewing preferences. Also, if energy efficiency and connectivity options are important, ensure the TV supports them. Lastly, if the price fits your budget, it might be the right choice.",
     }
+    
+    
 ]
 export default Homeproduct;

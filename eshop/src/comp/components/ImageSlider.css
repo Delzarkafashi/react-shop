@@ -48,10 +48,11 @@
 
 .slide {
     width: 100%; /* Varje slide fyller hela bredden */
-    height: 100%; /* Höjd för varje slide */
+    height: 500px; /* Höjd för varje slide */
     position: absolute; /* Positioneras ovanpå varandra */
     opacity: 0; /* Döljer alla slides som standard */
     transition: opacity 1s ease; /* Animering för att visa/ta bort slides */
+    background-color: #c6ffe1;
 }
 
 .slide.active {
@@ -59,9 +60,15 @@
 }
 
 .image {
-    width: 100%; /* Bildens bredd */
-    height: 450px; /* Bildens höjd */
-    object-fit: cover; /* Ser till att bilden täcker området utan att tappa proportioner */
+    width: 1000px; /* Bildens bredd anpassas till föräldraelementets bredd */
+    height: 500px; /* Höjden justeras automatiskt för att behålla bildens aspektförhållande */
+    object-fit: contain; /* Ser till att hela bilden syns utan att tappa proportioner */
+    display: block;
+    margin: auto; /* Centrerar bilderna horisontellt */
+    position: absolute;
+    top: 50%; /* Flytta ner bilden till mitten av föräldern */
+    left: 70%; /* Flytta bilden till mitten på sidan  */
+    transform: translate(-50%, -50%); /* Centrerar både vertikalt och horisontellt */
 }
 .slide-text {
     position: absolute;

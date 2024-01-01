@@ -5,13 +5,13 @@ import { MdOutlineKeyboardDoubleArrowRight, MdOutlineKeyboardDoubleArrowLeft } f
 
 const images = [
     { image: "image/S-tv-img.jpg", path: "/tv", text: "För se mera av våra TV, tryck här" },
-    { image: "image/S-speakers-img.jpg", path:  "/category1", text: "För se mera av våra TV, tryck här"  },
-    { image: "image/S-phone-img.jpg", path:  "/category1", text: "För se mera av våra TV, tryck här"  },
-    { image: "image/S-lap-img.png", path:  "/category1", text: "För se mera av våra TV, tryck här"  },
-    { image: "image/S-headphones-img.jpg", path:  "/category2", text: "För se mera av våra TV, tryck här"  },
-    { image: "image/S-ele-img.png", path:  "/category3", text: "För se mera av våra TV, tryck här"  },
-    { image: "image/S-clock-img.jpg", path:  "/category4" , text: "För se mera av våra TV, tryck här" },
-    { image: "image/S-all-img.png", path:  "/category5" , text: "För se mera av våra TV, tryck här" }
+    { image: "image/S-speakers-img.jpg", path: "/speakers", text: "För se mera av våra TV, tryck här"  },
+    { image: "image/S-phone-img.jpg", path:  "/phone", text: "För se mera av våra TV, tryck här"  },
+    { image: "image/S-lap-img.png", path:  "/lap", text: "För se mera av våra TV, tryck här"  },
+    { image: "image/S-headphones-img.jpg", path: "/headphones", text: "För se mera av våra TV, tryck här"  },
+    { image: "image/S-ele-img.png", path:  "/ele", text: "För se mera av våra TV, tryck här"  },
+    { image: "image/S-clock-img.jpg", path:  "/clock" , text: "För se mera av våra TV, tryck här" },
+    { image: "image/S-all-img.png", path:  "/all" , text: "För se mera av våra TV, tryck här" }
 ];
 
 const ImageSlider = ({ Filter, allcateFilter }) => {
@@ -41,19 +41,19 @@ const ImageSlider = ({ Filter, allcateFilter }) => {
                 <MdOutlineKeyboardDoubleArrowRight />
             </div>
             {images.map((slide, index) => {
-             return (
-             <div className={index === current ? "slide active" : "slide"} key={index}>
-            {index === current && (
-                <>
-                    <img src={slide.image} alt={`Slide ${index}`} className="image" />
-                    <div className="slide-text" onClick={() => handleSlideClick(slide.path)}>
-                        {slide.text}
+                return (
+                    <div className={index === current ? "slide active" : "slide"} key={index}>
+                        {index === current && (
+                            <>
+                                <img src={slide.image} alt={`Slide ${index}`} className="image" onClick={() => handleSlideClick(slide.path)} />
+                                <div className="slide-text" onClick={() => handleSlideClick(slide.path)}>
+                                    {slide.text}
+                                </div>
+                            </>
+                        )}
                     </div>
-                </>
-            )}
-        </div>
-    );
-})}
+                );
+            })}
         </section>
     );
 };
