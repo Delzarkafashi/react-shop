@@ -1,0 +1,17 @@
+/* Stil för själva Återställ-knappen */
+.reset-button-container button {
+    padding: 10px 15px; /* Justera efter önskemål */
+    border: none; /* Tar bort standardborder */
+    background-color: #007bff; /* Bakgrundsfärg */
+    color: white; /* Textfärg */
+    cursor: pointer; /* Ändrar cursor till en pekare */
+    border-radius: 5px; /* Runda hörn */
+    margin-right: 30px;
+    transition: 0.5s;
+    font-weight: 600;
+}
+
+/* Stil för hover-effekt på Återställ-knappen */
+.reset-button-container button:hover {
+    background-color: #0056b3; /* Mörkare blå vid hover */
+}

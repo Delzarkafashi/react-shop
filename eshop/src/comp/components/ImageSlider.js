@@ -7,7 +7,7 @@ const images = [
     { image: "image/S-tv-img.jpg", path: "/tv", text: "För se mera av våra TV, tryck här" },
     { image: "image/S-speakers-img.jpg", path: "/speakers", text: "För se mera av våra TV, tryck här"  },
     { image: "image/S-phone-img.jpg", path:  "/phone", text: "För se mera av våra TV, tryck här"  },
-    { image: "image/S-lap-img.png", path:  "/lap", text: "För se mera av våra TV, tryck här"  },
+    { image: "image/S-lap-img.png", path: "/laptop", text: "För se mera av våra TV, tryck här"  },
     { image: "image/S-headphones-img.jpg", path: "/headphones", text: "För se mera av våra TV, tryck här"  },
     { image: "image/S-ele-img.png", path:  "/ele", text: "För se mera av våra TV, tryck här"  },
     { image: "image/S-clock-img.jpg", path:  "/clock" , text: "För se mera av våra TV, tryck här" },

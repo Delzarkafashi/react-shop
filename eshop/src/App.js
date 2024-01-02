@@ -66,7 +66,7 @@ const App = () => {
     <>
     <BrowserRouter>
     <Nav search={search} setSearch= {setSearch} searchproduct={searchproduct}/>
-    <Rout setCart={setCart} cart={cart} shop={shop} Filter={Filter} allcateFilter={allcateFilter}  addtocart={addtocart}/>
+    <Rout setCart={setCart} cart={cart} shop={shop} Filter={Filter} allcateFilter={allcateFilter} addtocart={addtocart}/>
     <Footer />
     </BrowserRouter>
     </>

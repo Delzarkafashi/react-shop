@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import "./shop.css";
 import { AiFillHeart, AiFillEye } from 'react-icons/ai';
-import DetailPage from './components/DetailPage';
-import Category from './components/Category'; // Importera Category-komponenten
+import DetailPage from '../comp/components/DetailPage';
+import Category from '../comp/components/Category'; // Importera Category-komponenten
 
 const Shop = ({ shop, Filter, allcateFilter, addtocart }) => {
     const [showDetail, setShowDetail] = useState(false);

@@ -1,0 +1,81 @@
+/* Lägg till i category.css */
+.centered-content {
+    display: flex;
+    align-items: center; /* Centrera vertikalt */
+    justify-content: center; /* Centrera horisontellt */
+}
+
+.color-icon {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 10px; /* Justera efter behov */
+}
+/* Filterkontrollernas container */
+.filters {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Skapar lite utrymme mellan varje filterkontroll */
+    padding: 20px;
+    background-color: #c6ffe1;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Ger utrymme mellan filtren och produktlistan */
+    text-align: center; /* Centrerar innehåll */
+}
+
+/* Stil för varje filterkontroll */
+.filters select,
+.filters input[type=range] {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+}
+
+.filters select:hover,
+.filters input[type=range]:hover {
+    border-color: #a5a5a5;
+}
+
+/* Stil för etiketter (om du vill lägga till några) */
+.filters label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+/* Stil för varje filtersektion */
+.filter-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 0px; /* Lägg till lite marginal mellan varje filtersektion */
+}
+
+/* Stil för etiketter bredvid inputfält */
+.filter-section label {
+    margin-bottom: 0; /* Ta bort marginalen under etiketten */
+    white-space: nowrap; /* Förhindra radbrytning på etiketten */
+}
+/* Stil för prisintervallväljaren */
+.filters input[type='text'] {
+    width: 100%;
+    max-width: 300px; /* Anpassa efter dina behov */
+    padding: 5px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Hover-effekt för input-fält */
+.filters input[type='text']:hover {
+    border-color: #aaa;
+}
+
+/* Fokuseffekt för input-fält */
+.filters input[type='text']:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}

@@ -1,0 +1,21 @@
+/* SearchButton.css */
+.search-button {
+    padding: 10px 10px;
+    border-radius: 5px;
+    /* border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px; */
+    border: none;
+    outline: none;
+    width: 50px;
+    background: #6ddfd5;
+    color: #fff;
+    cursor: pointer;
+    margin-right: 30px;
+    transition: 0.5s;
+    font-weight: 600;
+}
+
+.search-button:hover {
+    background: #fed700;
+    color: #cd1e76;
+}
