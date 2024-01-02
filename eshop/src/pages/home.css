@@ -123,6 +123,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .home .trending .container .left_box .products button
 {

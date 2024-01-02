@@ -4,14 +4,14 @@ import "./ImageSlider.css"; // Se till att denna fil innehåller korrekt CSS
 import { MdOutlineKeyboardDoubleArrowRight, MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
 
 const images = [
-    { image: "image/S-tv-img.jpg", path: "/tv", text: "För se mera av våra TV, tryck här" },
-    { image: "image/S-speakers-img.jpg", path: "/speakers", text: "För se mera av våra TV, tryck här"  },
-    { image: "image/S-phone-img.jpg", path:  "/phone", text: "För se mera av våra TV, tryck här"  },
-    { image: "image/S-lap-img.png", path: "/laptop", text: "För se mera av våra TV, tryck här"  },
-    { image: "image/S-headphones-img.jpg", path: "/headphones", text: "För se mera av våra TV, tryck här"  },
-    { image: "image/S-ele-img.png", path:  "/ele", text: "För se mera av våra TV, tryck här"  },
-    { image: "image/S-clock-img.jpg", path:  "/clock" , text: "För se mera av våra TV, tryck här" },
-    { image: "image/S-all-img.png", path:  "/all" , text: "För se mera av våra TV, tryck här" }
+    { image: "image/S-tv-img.jpg", path: "/tv", text: "För se mera, tryck här" },
+    { image: "image/S-speaker-img.jpg", path: "/speaker", text: "För se mera , tryck här"  },
+    { image: "image/S-phone-img.jpg", path:  "/phone", text: "För se mera, tryck här"  },
+    { image: "image/S-lap-img.png", path: "/laptop", text: "För se mera, tryck här"  },
+    { image: "image/S-headphones-img.jpg", path: "/headphones", text: "För se mera, tryck här"  },
+    { image: "image/S-ele-img.png", path:  "/ele", text: "För se mera, tryck här"  },
+    { image: "image/S-clock-img.jpg", path:  "/clock" , text: "För se mera, tryck här" },
+    { image: "image/S-all-img.png", path:  "/all" , text: "För se mera, tryck här" }
 ];
 
 const ImageSlider = ({ Filter, allcateFilter }) => {

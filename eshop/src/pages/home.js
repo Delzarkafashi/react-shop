@@ -22,10 +22,6 @@ const Home = ({addtocart,}) => {
     setSelectedProduct(product);
     setShowDetail(true);
   };
-
-
-    
-
     //trednding product
     const [ trendingProduct, setTrendingProduct ] = useState(Homeproduct)
 
