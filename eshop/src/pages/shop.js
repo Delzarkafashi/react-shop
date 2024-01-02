@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import "./shop.css";
 import { AiFillHeart, AiFillEye } from 'react-icons/ai';
 import DetailPage from '../comp/components/DetailPage';
-import Category from '../comp/components/Category'; // Importera Category-komponenten
+import Category from '../comp/components/Category';
+import FilterHela from '../comp/components/Filter-hela';
 
-const Shop = ({ shop, Filter, allcateFilter, addtocart }) => {
+const Shop = ({ shop, addtocart }) => {
     const [showDetail, setShowDetail] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState(null);
+    const [filteredProducts, setFilteredProducts] = useState(shop); 
 
     const handleDetail = (product) => {
         setSelectedProduct(product);
@@ -18,39 +20,57 @@ const Shop = ({ shop, Filter, allcateFilter, addtocart }) => {
         setSelectedProduct(null);
     };
 
+    // Filtrerar produkterna baserat på kategori
+    const Filter = (category) => {
+        const results = shop.filter(product => product.cat === category);
+        setFilteredProducts(results);
+    };
+
+    // Återställer filtret för att visa alla produkter
+    const allcateFilter = () => {
+        setFilteredProducts(shop);
+    };
+
+    const onApplyFilter = (filters) => {
+        console.log("Applying filters:", filters);
+
+        let results = shop;
+        if (filters.minPrice !== '') {
+            results = results.filter(product => product.price >= Number(filters.minPrice));
+        }
+        if (filters.maxPrice !== '') {
+            results = results.filter(product => product.price <= Number(filters.maxPrice));
+        }
+        if (filters.type !== 'all') {
+            results = results.filter(product => product.cat === filters.type);
+        }
+        if (filters.color !== 'all') {
+            results = results.filter(product => product.color === filters.color);
+        }
+
+        setFilteredProducts(results);
+    };
+
     return (
         <>
-            {
-                showDetail && selectedProduct &&
+            {showDetail && selectedProduct &&
                 <DetailPage product={selectedProduct} addtocart={addtocart} closeDetail={closedetail} />
             }
             <div className="shop">
                 <h2># shop</h2>
-                <p>Home . shop</p>
                 <div className="container">
-                    <div className="left_box">
-                        <Category Filter={Filter} allcateFilter={allcateFilter} />  {/* Använd Category-komponenten */}
-                        <div className="banner">
-                            <div className="img_box">
-                                <img src="image/shop_left.avif" alt="" />
-                            </div>
-                        </div>
-                    </div>
                     <div className="right_box">
-                        <div className="banner">
-                            <div className="img_box">
-                                <img src="image/shop_top.webp" alt="" />
-                            </div>
-                        </div>
+                        <Category Filter={Filter} allcateFilter={allcateFilter} />
+                        <FilterHela onApplyFilter={onApplyFilter} />
                         <div className="product_box">
                             <h2>Shop product</h2>
                             <div className="product_container">
                                 {
-                                    shop.map((curElm) => {
+                                    filteredProducts.map((curElm) => {
                                         return (
                                             <div key={curElm.Id} className="box">
                                                 <div className="img_box">
-                                                    <img src={curElm.image} alt="" />
+                                                    <img src={curElm.image} alt={curElm.Name} />
                                                     <div className="icon">
                                                         <li><AiFillHeart /></li>
                                                         <li onClick={() => handleDetail(curElm)}><AiFillEye /></li>

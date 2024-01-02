@@ -1,0 +1,19 @@
+#myBtn {
+    display: none;  /* Dold som standard */
+    position: fixed;  /* Fast positionerad */
+    bottom: 20px;  /* Plats från botten */
+    right: 30px;  /* Plats från höger */
+    z-index: 99;  /* Säkerställer att knappen är över andra objekt */
+    border: none;
+    outline: none;
+    background-color: red;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  #myBtn:hover {
+    background-color: #555; /* Liten hover-effekt */
+  }
+  

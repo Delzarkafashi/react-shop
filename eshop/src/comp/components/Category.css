@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.category
+{
+    border: 3px solid #f6f6f6;
+    width: 100%;
+}
+.category .header
+{
+    max-width: 100%;
+    padding: 10px 20px;
+    background: #f6f6f6;
+}
+.category .header h3
+{
+    font-size: 16px;
+    color: #232323;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+.category .boxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Öka lite utrymme mellan boxarna */
+    padding: 20px; /* Lägg till padding inuti container */
+    justify-content: center; /* Centrera boxarna om det finns extra utrymme */
+}
+
+.category .box {
+    width: 150px; /* Eller vilken bredd du föredrar */
+    padding: 10px;
+    text-align: center; /* Centrerar texten */
+    background-color: #f0f0f0; /* Lägg till en bakgrundsfärg */
+    border-radius: 10px; /* Rundade hörn */
+    cursor: pointer; /* Visar en pekare för att indikera att det är klickbart */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Lite skugga för djup */
+    border: 1px solid #e0e0e0;
+}
+.category .box:hover {
+    background-color: #cd1e76; /* Ändrar bakgrundsfärgen vid hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Öka skuggan lite för att lyfta boxen */
+    transform: translateY(-5px); /* Låt boxen röra sig lite uppåt */
+    transition: all 0.3s ease; /* Gör övergången mjuk */
+}
+
+/* .category .box img {
+    width: 100%; 
+    height: 100px; 
+    object-fit: cover; 
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+} */
+
+
+.category .box p {
+    color: #232323;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 8px; /* Justera enligt behov */
+    font-size: 14px; /* Gör texten lite större */
+}
+
+/* .category .box
+{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 20px;
+}
+.category .box ul 
+{
+    max-width: 100%;
+}
+.category .box ul li
+{
+    list-style: none;
+    margin-left: 10px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #8a8a8a;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.category .box ul li:hover
+{
+    color: #232323;
+} */

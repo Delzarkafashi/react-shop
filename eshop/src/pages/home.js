@@ -6,6 +6,7 @@ import { AiFillEye, AiFillHeart, AiOutlineShoppingCart } from "react-icons/ai";
 import { BiLogoFacebook, BiLogoInstagram, BiLogoTwitter, BiLogoYoutube } from "react-icons/bi";
 import DetailPage from "../comp/components/DetailPage";
 import ImageSlider from "../comp/components/ImageSlider";
+import ShowMore from "../comp/components/buttons/ShowMore";
 const Home = ({addtocart,}) => {
     //product category
     const [newProduct, setNewProduct] = useState([])
@@ -86,13 +87,13 @@ const Home = ({addtocart,}) => {
 
 
         <div className="home">
-            <div><ImageSlider /></div>
+            <div><ImageSlider/></div>
             <div className="top_banner">
                   <div className = "contant">
                   <h3>silver aluminum</h3>
                   <h2>Apple Watch</h2>
                   <p>30% off at your first odder</p>
-                  <Link to="/shop" className="link">Shop Now</Link>
+                  <Link to="/watch" className="link">Shop Now</Link>
                 </div>
             </div>
             <div className="trending">
@@ -138,7 +139,7 @@ const Home = ({addtocart,}) => {
                                     )
                                 }
                             </div>
-                            <button>Show More</button>
+                        <ShowMore/>
                         </div>
                     </div>
                     <div className="right_box">

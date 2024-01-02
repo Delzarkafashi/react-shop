@@ -9,6 +9,7 @@ import Laptop from "../pages/cate/laptop";
 import Speaker from "../pages/cate/speaker";
 import Phone from "../pages/cate/phone";
 import Headphones from "../pages/cate/headphones";
+import Watch from "../pages/cate/watch";
 
 const Rout = ({shop, Filter, allcateFilter, addtocart, cart, setCart}) =>{
     return (
@@ -23,6 +24,7 @@ const Rout = ({shop, Filter, allcateFilter, addtocart, cart, setCart}) =>{
            <Route path="/speaker" element={<Speaker shop={shop} addtocart={addtocart}/>}/>
            <Route path="/phone" element={<Phone shop={shop} addtocart={addtocart}/>}/>
            <Route path="/headphones" element={<Headphones shop={shop} addtocart={addtocart}/>}/>
+            <Route path="/watch" element={<Watch shop={shop} addtocart={addtocart}/>}/>
         </Routes> 
         </>
     )

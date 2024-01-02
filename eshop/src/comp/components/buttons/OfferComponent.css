@@ -1,0 +1,21 @@
+.offer {
+    display: flex;
+    margin-right: 20px;
+    padding: 22px 20px;
+    background: #fed700;
+    border-radius: 10px;
+    align-items: center;
+    cursor: pointer; /* Lägg till detta för att indikera att det är klickbart */
+}
+
+.offer p {
+    text-transform: uppercase;
+    color: #232323;
+    font-weight: 600;
+    font-size: 14px;
+    margin: 0; /* Nollställ eventuella standardmarginaler */
+}
+.offer:hover {
+    background: #cd1e76; /* Ändrar bakgrundsfärgen vid hover */
+    color: #f6f7f8; /* Ändrar textfärgen vid hover */
+}

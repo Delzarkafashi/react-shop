@@ -8,6 +8,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Link } from "react-router-dom";
 import "./nav.css"
 import Breadcrumbs from "./components/Bredcrumbs.js";
+import OfferComponent from "./components/buttons/OfferComponent.js";
 
 
 const Nav = ({search, setSearch, searchproduct}) => {
@@ -90,8 +91,8 @@ const Nav = ({search, setSearch, searchproduct}) => {
                     </ul>
                     <Breadcrumbs />
                 </div>
-                <div className="offer">
-                    <p>flat 10% all iphone</p>
+                <div >
+                <OfferComponent /> 
                 </div>
             </div>
         </div>

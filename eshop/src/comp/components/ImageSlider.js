@@ -2,21 +2,22 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ImageSlider.css"; // Se till att denna fil innehåller korrekt CSS
 import { MdOutlineKeyboardDoubleArrowRight, MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
-
-const images = [
-    { image: "image/S-tv-img.jpg", path: "/tv", text: "För se mera, tryck här" },
-    { image: "image/S-speaker-img.jpg", path: "/speaker", text: "För se mera , tryck här"  },
-    { image: "image/S-phone-img.jpg", path:  "/phone", text: "För se mera, tryck här"  },
-    { image: "image/S-lap-img.png", path: "/laptop", text: "För se mera, tryck här"  },
-    { image: "image/S-headphones-img.jpg", path: "/headphones", text: "För se mera, tryck här"  },
-    { image: "image/S-ele-img.png", path:  "/ele", text: "För se mera, tryck här"  },
-    { image: "image/S-clock-img.jpg", path:  "/clock" , text: "För se mera, tryck här" },
-    { image: "image/S-all-img.png", path:  "/all" , text: "För se mera, tryck här" }
-];
+import Homeproduct from "../home_product";
 
 const ImageSlider = ({ Filter, allcateFilter }) => {
+    // Filtrera och omvandla data från produktlistan till önskat format för bildspelaren
+    const sliderImages = Homeproduct.filter(product => product.type === "slider") // Byt ut 'slider' mot rätt värde för din filtrering
+                                 .map(product => ({
+                                     image: product.image,
+                                     path: `/${product.cat}`,
+                                     text: "För se mera, tryck här",
+                                     info: product.info, // Lägger till 'info' fältet
+                                     Name: product.Name, // Lägger till 'Name' fältet
+                                     price: product.price 
+                                 }));
+
     const [current, setCurrent] = useState(0);
-    const length = images.length;
+    const length = sliderImages.length; // Använda längden på den filtrerade listan
     const navigate = useNavigate();
 
     const nextSlide = () => {
@@ -30,7 +31,10 @@ const ImageSlider = ({ Filter, allcateFilter }) => {
     const handleSlideClick = (path) => {
         navigate(path);  // Navigera till angiven path
     };
-    
+
+    if (!Array.isArray(sliderImages) || sliderImages.length <= 0) {
+        return null; // Om det inte finns några bilder, rendera ingenting
+    }
 
     return (
         <section className="slider">
@@ -40,7 +44,7 @@ const ImageSlider = ({ Filter, allcateFilter }) => {
             <div className="right-arrow" onClick={nextSlide}>
                 <MdOutlineKeyboardDoubleArrowRight />
             </div>
-            {images.map((slide, index) => {
+            {sliderImages.map((slide, index) => {
                 return (
                     <div className={index === current ? "slide active" : "slide"} key={index}>
                         {index === current && (
@@ -48,6 +52,10 @@ const ImageSlider = ({ Filter, allcateFilter }) => {
                                 <img src={slide.image} alt={`Slide ${index}`} className="image" onClick={() => handleSlideClick(slide.path)} />
                                 <div className="slide-text" onClick={() => handleSlideClick(slide.path)}>
                                     {slide.text}
+                                </div>
+                                <div className="product-info-text">
+                                    <h1>{slide.Name} - $ {slide.price}</h1>
+                                    <p>{slide.info}</p>
                                 </div>
                             </>
                         )}
@@ -57,6 +65,5 @@ const ImageSlider = ({ Filter, allcateFilter }) => {
         </section>
     );
 };
-
 
 export default ImageSlider;

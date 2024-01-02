@@ -35,74 +35,7 @@
 {
     width: 25%;
 }
-.shop .container .left_box .category
-{
-    border: 3px solid #f6f6f6;
-    width: 250px;
-}
-.shop .container .left_box .category .header
-{
-    max-width: 100%;
-    padding: 10px 20px;
-    background: #f6f6f6;
-}
-.shop .container .left_box .category .header h3
-{
-    font-size: 16px;
-    color: #232323;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-.shop .container .left_box .category .box
-{
-    margin-top: 10px;
-    width: 100%;
-    padding: 10px 20px;
-}
-.shop .container .left_box .category .box ul 
-{
-    max-width: 100%;
-}
-.shop .container .left_box .category .box ul li
-{
-    list-style: none;
-    margin-left: 10px;
-    text-transform: uppercase;
-    margin-top: 10px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #8a8a8a;
-    letter-spacing: 1px;
-    cursor: pointer;
-    transition: 0.5s;
-}
-.shop .container .left_box .category .box ul li:hover
-{
-    color: #232323;
-}
-.shop .container .left_box .banner
-{
-    margin-top: 20px;
-    width: 250px;
-}
-.shop .container .left_box .banner .img_box img
-{
-    width: 100%;
-    object-fit: cover;
-}
-.shop .container .right_box
-{
-    width: 74%;
-}
-.shop .container .right_box .banner
-{
-    max-width: 100%;
-}
-.shop .container .right_box .banner .img_box img
-{
-    width: 100%;
-    object-fit: cover;
-}
+
 .shop .container .right_box .product_box
 {
     max-width: 100%;
@@ -110,11 +43,26 @@
 }
 .shop .container .right_box .product_box h2
 {
+    display: flex;
     color: #232323;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-size: 22px;
-    margin-top: 10px;
+    margin-bottom: 20px;
+    font-weight: 600;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Justera som behövs */
+    font-family: 'Montserrat', sans-serif; /* Exempel på ett anpassat typsnitt */
+    background-color: #f0f0f0; /* En ljus bakgrund */
+    border-bottom: 2px solid #cd1e76; /* En border under rubriken */
+    padding: 10px; /* Lite utrymme runt texten */
+    border-radius: 5px; /* Rundade hörn */
+    width: 350px;
+    position: relative;
+    left: 40%;
+
+
+
 }
 .shop .container .right_box .product_box .product_container
 {
@@ -122,6 +70,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    background-color: #c6ffe1;
+    justify-content: center;
 }
 .shop .container .right_box .product_box .product_container .box
 {

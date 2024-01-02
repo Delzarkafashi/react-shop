@@ -9,6 +9,7 @@
     transition: opacity 1s ease; /* Animering för att visa/ta bort slides */
     padding-top: 20px;
     padding-bottom: 20px;
+    
 }
 
 .left-arrow, .right-arrow {
@@ -53,6 +54,8 @@
     opacity: 0; /* Döljer alla slides som standard */
     transition: opacity 1s ease; /* Animering för att visa/ta bort slides */
     background-color: #c6ffe1;
+    overflow: visible;
+
 }
 
 .slide.active {
@@ -60,20 +63,23 @@
 }
 
 .image {
-    width: 1000px; /* Bildens bredd anpassas till föräldraelementets bredd */
-    height: 500px; /* Höjden justeras automatiskt för att behålla bildens aspektförhållande */
-    object-fit: contain; /* Ser till att hela bilden syns utan att tappa proportioner */
+    width: 750px; /* Bildens bredd anpassas till föräldraelementets bredd */
+    height: 480px; /* Höjden justeras automatiskt för att behålla bildens aspektförhållande */
+    object-fit: cover; /* Ser till att hela bilden syns utan att tappa proportioner */
     display: block;
     margin: auto; /* Centrerar bilderna horisontellt */
     position: absolute;
     top: 50%; /* Flytta ner bilden till mitten av föräldern */
     left: 70%; /* Flytta bilden till mitten på sidan  */
     transform: translate(-50%, -50%); /* Centrerar både vertikalt och horisontellt */
+    border-top-left-radius: 350px;
+    border-bottom-left-radius: 350px;
+    margin-top: -9px;
 }
 .slide-text {
     position: absolute;
-    top: 80%; /* Centrera vertikalt i förhållande till höjden */
-    left: 50%; /* Centrera horisontellt i förhållande till bredden */
+    top: 85%; /* Centrera vertikalt i förhållande till höjden */
+    left: 20%; /* Centrera horisontellt i förhållande till bredden */
     transform: translate(-50%, -50%); /* Justerar exakt centrumpositionen */
     color: white; /* Eller vilken färg du föredrar */
     background-color: rgba(0, 0, 0, 0.5); /* Halvgenomskinlig svart bakgrund */
@@ -83,5 +89,46 @@
     text-align: center; /* Centrerar texten inom elementet */
     /* Lägg till ytterligare styling efter behov */
     z-index: 11;
+    font-weight: 600;
 }
+.slide-text:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Ljus bakgrund när musen är över */
+    color: blue; /* Ändra textfärg */
+}
+.product-info-text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40%; /* Tar upp halva bredden */
+    height: 100%; /* Full höjd */
+    padding: 20px; /* Lite utrymme inuti */
+    display: flex; /* Använder flex för att centrera innehållet */
+    align-items: center; /* Centrerar vertikalt */
+    justify-content: center; /* Centrerar horisontellt */
+    text-align: left; /* Texten börjar från vänster */
+    background-color: rgba(0, 0, 0, 0); /* Om du vill ha en bakgrund */
+    color: #161616; /* Textfärg */
+    z-index: 5; /* Se till att den inte täcks av andra element */
+    display: flex;
+    flex-direction: column; /* Staplar barn vertikalt */
+    align-items: center; /* Centrerar barn horisontellt */
+    justify-content: flex-start; /* Börjar från toppen */
+    text-align: center; /* Centrerar texten */
+    font-weight: 600;
+}
+
+.product-info-text h1 {
+    margin-top: 50px; /* Justera som behövs, ger utrymme från toppen */
+    /* Lägg till ytterligare styling för h3 här om nödvändigt */
+    font-weight: 600;
+}
+
+.product-info-text p {
+    /* Lägg till styling för p här om nödvändigt, exempelvis: */
+    margin-top: 40px; /* Ger utrymme mellan h3 och p */
+    overflow: auto;
+    max-width: 60%;
+}
+
+
 

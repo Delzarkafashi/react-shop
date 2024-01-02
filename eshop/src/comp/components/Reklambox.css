@@ -1,0 +1,23 @@
+.banner
+{
+    margin-top: 20px;
+    width: 250px;
+}
+.banner .img_box img
+{
+    width: 100%;
+    object-fit: cover;
+}
+/* .shop .container .right_box
+{
+    width: 74%;
+} */
+.banner
+{
+    max-width: 100%;
+}
+.banner .img_box img
+{
+    width: 100%;
+    object-fit: cover;
+}

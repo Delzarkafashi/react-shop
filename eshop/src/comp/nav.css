@@ -186,22 +186,6 @@
     color: #fed700;
 }
 
-.header .last_header .offer
-{
-    margin-right: 20px;
-    padding: 10px 20px;
-    background: #fed700;
-    border-radius: 10px;
-}
-.header .last_header .offer p
-{
-    margin-top: 5px;
-    text-transform: uppercase;
-    color: #232323;
-    font-weight: 600;
-    font-size: 14px;
-
-}
 /* header nav a.active {
     background-color: #555;
       margin: auto;
