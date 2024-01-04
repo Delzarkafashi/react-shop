@@ -1,0 +1,39 @@
+.banners
+{
+    padding: 20px 30px;
+    width: 100%;
+}
+.banners .container
+{
+    max-width: 100%;
+    display: flex;
+}
+.banners .container .left_box
+{
+    width: 24%;
+}
+.banners .container .left_box .box
+{
+    margin-top: 10px;
+}
+.banners .container .right_box
+{
+    width: 75%;
+}
+.banners .container .right_box .top
+{
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+.banners .container .right_box .bottom
+{
+    max-width: 100%;
+    margin-top: 10px;
+}
+.banners .container .right_box .bottom img
+{
+    width: 100%;
+    object-fit: cover;
+}

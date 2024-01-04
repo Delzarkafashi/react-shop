@@ -1,0 +1,74 @@
+.newsletter
+{
+    width: 100%;
+    background: #f6f7f8;
+    margin-top: 20px;
+    padding: 10px 10px;
+}
+.newsletter .head
+{
+    margin-top: 10px;
+    width: 100%;
+}
+.newsletter .head h3
+{
+    text-align: center;
+    color: #232323;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.newsletter .form 
+{
+    margin-top: 10px;
+    width: 100%;
+}
+.newsletter .form p
+{
+    text-align: center;
+    text-transform: capitalize;
+    color: #8a8a8a;
+}
+.newsletter .form input
+{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 10px;
+    background: none;
+    outline: none;
+    border: none;
+    border: 1px solid #8a8a8a;
+    color: #232323;
+}
+.form button {
+    display: block; /* Gör så att knappen behandlas som ett blockelement */
+    margin-top: 10px; 
+    margin-left: auto; /* Centrerar knappen horisontellt */
+    margin-right: auto; /* Centrerar knappen horisontellt */
+    padding: 10px 30px; 
+    border: none; 
+    background: #fed700;
+    color: #232323; 
+    font-weight: 600; 
+    cursor: pointer; 
+}
+.form .icon_box {
+    display: flex; /* Aktiverar flexbox-layout */
+    justify-content: center; /* Centrerar ikonerna horisontellt */
+    flex-wrap: wrap; /* Tillåter ikonerna att omsluta på flera rader om nödvändigt */
+    gap: 10px; /* Skapar ett mellanrum på 10px mellan varje ikon */
+    margin-top: 20px;
+}
+
+.form .icon_box .icon {
+    padding: 10px; /* Behåller padding för varje ikon */
+    border-radius: 50%; 
+    border: 1px solid #cd1e76; 
+    color: #cd1e76; 
+    cursor: pointer; 
+}
+.form .icon_box .icon:hover
+{
+    color: #fff;
+    background: #cd1e76;
+}
