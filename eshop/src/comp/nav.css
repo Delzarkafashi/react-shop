@@ -34,77 +34,9 @@
     justify-content: space-between;
     align-items: center;
 }
-.header .mid_header .logo {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.header .mid_header .logo a {
-    text-decoration: none; /* Tar bort standard textdekoration från länkar */
-    color: inherit; /* Arv färg från parent, ändra efter behov */
-    display: flex; /* Gör så att innehållet linjeras sida vid sida */
-    align-items: center; /* Centrerar innehållet vertikalt */
-}
-
-.header .mid_header .logo img {
-    cursor: pointer;
-    object-fit: cover;
-    height: 50px; /* Justera efter behov */
-}
-
-.header .mid_header .logo h2 {
-    margin: 0; /* Tar bort standardmarginalen från h2 */
-    cursor: pointer;
-    width: 100px;
-    font-family: 'Arial', sans-serif; /* Ändrar typsnittet */
-    font-size: 24px; /* Ändrar textstorleken */
-    font-weight: bold; /* Gör texten fet */
-    font-style: italic; /* Gör texten kursiv */
-    color: #151515; /* Ändrar textfärgen */
-}
-
-.header .mid_header .logo a:hover img {
-    opacity: 0.8; /* Exempel på hover-effekt för bild */
-}
-
-.header .mid_header .logo a:hover h2 {
-    color: blue; /* Ändrar textfärgen till blått vid hover */
-}
 
 
 
-.header .mid_header .search_box input
-{
-    padding: 10px 10px;
-    outline: none;
-    background: none;
-    border-top-left-radius: 5px;
-    border-bottom-left-radius: 5px;
-    width: 250px;
-    border: none;
-    background:  #f6f7f8;
-}
-.header .mid_header .search_box button
-{
-    padding: 10px 10px;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border: none;
-    outline: none;
-    width: 50px;
-    background: #cd1e76;
-    color: #fff;
-    cursor: pointer;
-    margin-right: 30px;
-    transition: 0.5s;
-    font-weight: 600;
-}
-.header .mid_header .search_box button:hover
-{
-    background: #fed700;
-    color: #cd1e76;
-}
 .header .mid_header .user 
 {
     display: flex;

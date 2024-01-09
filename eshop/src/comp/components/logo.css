@@ -1,0 +1,43 @@
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo a {
+    text-decoration: none; /* Tar bort standard textdekoration från länkar */
+    color: inherit; /* Arv färg från parent, ändra efter behov */
+    display: flex; /* Gör så att innehållet linjeras sida vid sida */
+    align-items: center; /* Centrerar innehållet vertikalt */
+}
+
+.logo img {
+    cursor: pointer;
+    object-fit: cover;
+    height: 50px; /* Justera efter behov */
+}
+
+.logo h2 {
+    margin: 0; /* Tar bort standardmarginalen från h2 */
+    cursor: pointer;
+    width: 100px;
+    font-family: 'Arial', sans-serif; /* Ändrar typsnittet */
+    font-size: 24px; /* Ändrar textstorleken */
+    font-weight: bold; /* Gör texten fet */
+    font-style: italic; /* Gör texten kursiv */
+    color: #151515; /* Ändrar textfärgen */
+}
+
+.logo a:hover img {
+    opacity: 0.8; /* Exempel på hover-effekt för bild */
+}
+
+.logo a:hover h2 {
+    color: blue; /* Ändrar textfärgen till blått vid hover */
+}
+/* Media Query */
+/* @media (max-width: 600px) {
+    .logo h2 {
+        display: none;
+    }
+} */

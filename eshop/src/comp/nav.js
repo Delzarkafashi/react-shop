@@ -1,6 +1,5 @@
 import React from "react";
 import { MdLocalShipping } from 'react-icons/md';
-import { AiOutlineSearch } from 'react-icons/ai';
 import { FiLogIn } from "react-icons/fi";
 import { CiLogout } from "react-icons/ci";
 import { AiOutlineUser } from "react-icons/ai";
@@ -9,6 +8,8 @@ import { Link } from "react-router-dom";
 import "./nav.css"
 import Breadcrumbs from "./components/Bredcrumbs.js";
 import OfferComponent from "./components/buttons/OfferComponent.js";
+import Logo from "./components/logo.js";
+import SearchBox from "./components/SearchBox.js";
 
 
 const Nav = ({search, setSearch, searchproduct}) => {
@@ -26,16 +27,13 @@ const Nav = ({search, setSearch, searchproduct}) => {
                 </div>
             </div>
             <div className="mid_header">
-                  <div className="logo">
-                  <Link to="/">
-                      <img src="image/logo gorila.png" alt="logo"></img>
-                      <h2>välkommen till oss</h2>
-                  </Link>
-              </div>
-                <div className="search_box">
-                <input type="text" value={search} placeholder="search" onChange={(e) => setSearch(e.target.value)} />
-                <button onClick={searchproduct}><AiOutlineSearch /></button>
-                </div>
+                  <Logo/>
+              
+                  <SearchBox
+                    search={search} 
+                    setSearch={setSearch} 
+                    searchproduct={searchproduct} 
+                />
                 {
                     isAuthenticated?
                     <div className="user">
