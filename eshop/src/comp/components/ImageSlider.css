@@ -55,7 +55,7 @@
     transition: opacity 1s ease; /* Animering för att visa/ta bort slides */
     background-color: #c6ffe1;
     overflow: visible;
-
+    
 }
 
 .slide.active {

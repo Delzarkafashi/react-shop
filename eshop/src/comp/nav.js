@@ -4,12 +4,11 @@ import { FiLogIn } from "react-icons/fi";
 import { CiLogout } from "react-icons/ci";
 import { AiOutlineUser } from "react-icons/ai";
 import { useAuth0 } from "@auth0/auth0-react";
-import { Link } from "react-router-dom";
 import "./nav.css"
-import Breadcrumbs from "./components/Bredcrumbs.js";
-import OfferComponent from "./components/buttons/OfferComponent.js";
+// import OfferComponent from "./components/buttons/OfferComponent.js";
 import Logo from "./components/logo.js";
 import SearchBox from "./components/SearchBox.js";
+import NavMenu from "./components/NavMenu.js";
 
 
 const Nav = ({search, setSearch, searchproduct}) => {
@@ -17,6 +16,7 @@ const Nav = ({search, setSearch, searchproduct}) => {
 
     return (
         <>
+        <div className="AllHeader">
         <div className="header">
             <div className="top_header">
                 <div className="icon">
@@ -28,9 +28,9 @@ const Nav = ({search, setSearch, searchproduct}) => {
             </div>
             <div className="mid_header">
                   <Logo/>
-              
                   <SearchBox />
                 {
+                    
                     isAuthenticated?
                     <div className="user">
                     <div className="icon">
@@ -52,6 +52,7 @@ const Nav = ({search, setSearch, searchproduct}) => {
                 }
             </div>
             <div className="last_header">
+            <NavMenu />
                 <div className="user_profile">
                     {
                         isAuthenticated ?
@@ -75,20 +76,8 @@ const Nav = ({search, setSearch, searchproduct}) => {
                         </>
                     }   
                 </div>
-                <div className="nav">
-                    <ul>
-                        <li><Link to="/" className="link">Home</Link></li>
-                        <li><Link to="/shop" className="link">Shop</Link></li>
-                        <li><Link to="/cart" className="link">Cart</Link></li>
-                        <li><Link to="/tv" className="link">tv</Link></li>
-                        <li><Link to="/contact" className="link">Contact</Link></li>
-                    </ul>
-                    <Breadcrumbs />
-                </div>
-                <div >
-                <OfferComponent /> 
-                </div>
             </div>
+        </div>
         </div>
 
         </>

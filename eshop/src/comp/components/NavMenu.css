@@ -1,0 +1,82 @@
+
+.nav ul {
+    display: flex;
+}
+
+.nav ul li {
+    list-style: none;
+}
+
+.nav ul li .link {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #151515;
+    font-weight: 600;
+    transition: 0.5s;
+}
+
+.nav ul li .link:hover {
+    color: #fed700;
+}
+
+.nav ul li .link.active {
+    color: #fed700;
+}
+
+/* Stilar för hamburgerikonen */
+.hamburger-icon {
+    display: none; /* Göm hamburgerikonen på större skärmar */
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px; /* Bredd på ikonen */
+    height: 25px; /* Höjd på ikonen */
+}
+
+.hamburger-icon div {
+    height: 3px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Animation */
+}
+.hamburger-icon.open div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger-icon.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-icon.open div:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Responsiva stilar för mindre skärmar */
+@media (max-width: 768px) {
+    .nav-menu-container{
+        margin-left: 10px;
+    }
+    .hamburger-icon {
+        display: flex; /* Visa hamburgerikonen på små skärmar */
+        position: relative; /* Eller 'fixed' beroende på din layout */
+        z-index: 1001; /* Högre än z-index för .nav.open ul */
+    }
+
+    .nav ul {
+        flex-direction: column; /* Stapla länkarna vertikalt */
+        display: none; /* Göm menyn initialt */
+    }
+
+    .nav.open ul {
+        display: flex; /* Visa menyn när den är öppen */
+        background-color: #c6ffe1;
+        z-index: 1000;
+        position: fixed;
+        margin-top: 30px;
+        padding-left: 10px;
+    }
+
+    .nav ul li {
+        margin-top: 10px; /* Lägg till utrymme mellan länkar */
+    }
+}

@@ -4,6 +4,15 @@
     font-family: sans-serif;
     box-sizing: border-box;
 }
+.AllHeader{
+    position: fixed; /* Fixerar headern på skärmen */
+    top: 0; /* Placerar headern högst upp på sidan */
+    left: 0; /* Linjerar headern längst till vänster på sidan */
+    width: 100%; /* Bredd sätts till 100% av skärmbredden */
+    z-index: 1000; /* Ser till att headern ligger över andra element */
+    background-color: #fff; /* Ger en bakgrundsfärg så den inte är genomskinlig */
+    /* Lägg till ytterligare stilar för headern här om det behövs */
+}
 .header
 {
     width: 100%;
@@ -56,24 +65,25 @@
 }
 .header .last_header
 {
+    display: flex;
+    justify-content: center;
     width: 100%;
-    padding: 10px 10px;
     display: flex;
     background: #c6ffe1;
     justify-content: space-between;
-    height: 80px;
+    height: 30px;
 }
 .header .last_header .user_profile
 {
     display: flex;
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .header .last_header .user_profile .icon
 {
     padding: 10px 10px;
     background: #fff;
-    border-radius: 10px;
-    height: 40px;
+    border-radius: 60%;
+    height: 30px;
 }
 .header .last_header .user_profile .info
 {
@@ -90,33 +100,7 @@
     font-size: 14px;
     padding-top: 10px;
 }
-.header .last_header .nav
-{
-    margin-top: 15px;
-}
-.header .last_header .nav ul
-{
-    display: flex;
-}
-.header .last_header .nav ul li
-{
-    list-style: none;
-}
-.header .last_header .nav ul li .link
-{
-    margin-right: 20px;
-    text-decoration: none;
-    color: #151515;
-    font-weight: 600;
-    transition: 0.5s;
-}
-.header .last_header .nav ul li .link:hover
-{
-    color: #fed700;
-}
-.header .last_header .nav ul li .link.active {
-    color: #fed700;
-}
+
 
 /* header nav a.active {
     background-color: #555;
@@ -127,3 +111,25 @@
     background-color: #777;
     margin: auto;
 } */
+/* ... befintliga stilar ... */
+
+/* Media query för mindre skärmar */
+@media (max-width: 768px) {
+    .header .mid_header .user{
+        margin-right: 10px;
+    }
+    .header .last_header .user_profile {
+        margin-right: 10px;
+    }
+    .header .last_header .user_profile .info p {
+        display: none; /* Gömmer paragraferna i user_profile på mindre skärmar */
+    }
+    .header .last_header .user_profile .info h2 {
+        margin-top: 5px;
+    }
+    .header .last_header .user_profile .icon {
+    font-size: 15px;
+    }
+
+    /* Lägg till ytterligare stiländringar för mindre skärmar här om nödvändigt */
+}
