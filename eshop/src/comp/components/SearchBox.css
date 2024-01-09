@@ -29,3 +29,13 @@
     background: #fed700;
     color: #cd1e76;
 }
+/* @media (min-width: 600px) {
+    .search_box input {
+        display: block;
+    }
+}
+
+/* Alternativ styling när input ska visas 
+.search_box.show_input input {
+    display: block;
+} */

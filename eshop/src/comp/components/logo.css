@@ -36,8 +36,8 @@
     color: blue; /* Ändrar textfärgen till blått vid hover */
 }
 /* Media Query */
-/* @media (max-width: 600px) {
+@media (max-width: 600px) {
     .logo h2 {
         display: none;
     }
-} */
+}

@@ -5,10 +5,35 @@ import DetailPage from '../comp/components/DetailPage';
 import Category from '../comp/components/Category';
 import FilterHela from '../comp/components/Filter-hela';
 
+import { useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+
 const Shop = ({ shop, addtocart }) => {
     const [showDetail, setShowDetail] = useState(false);
     const [selectedProduct, setSelectedProduct] = useState(null);
     const [filteredProducts, setFilteredProducts] = useState(shop); 
+
+
+    // Tillstånd för sökterm
+    const location = useLocation();
+
+    useEffect(() => {
+        const queryParams = new URLSearchParams(location.search);
+        const searchTerm = queryParams.get('search');
+        if (searchTerm) {
+            const lowerCaseTerm = searchTerm.toLowerCase();
+            const filtered = shop.filter(product =>
+                product.Name.toLowerCase().includes(lowerCaseTerm) ||
+                product.cat.toLowerCase().includes(lowerCaseTerm)
+            );
+            setFilteredProducts(filtered);
+        } else {
+            setFilteredProducts(shop);
+        }
+    }, [location, shop]);
+    
+
+
 
     const handleDetail = (product) => {
         setSelectedProduct(product);

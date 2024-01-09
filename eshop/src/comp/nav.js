@@ -29,11 +29,7 @@ const Nav = ({search, setSearch, searchproduct}) => {
             <div className="mid_header">
                   <Logo/>
               
-                  <SearchBox
-                    search={search} 
-                    setSearch={setSearch} 
-                    searchproduct={searchproduct} 
-                />
+                  <SearchBox />
                 {
                     isAuthenticated?
                     <div className="user">
