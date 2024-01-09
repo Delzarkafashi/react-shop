@@ -1,5 +1,9 @@
-.search_box input
-{
+.search_box {
+    display: flex;
+    align-items: center;
+}
+
+.search_box input {
     padding: 10px 10px;
     outline: none;
     background: none;
@@ -7,7 +11,8 @@
     border-bottom-left-radius: 5px;
     width: 250px;
     border: none;
-    background:  #f6f7f8;
+    background: #f6f7f8;
+    transition: 0.3s;
 }
 .search_box button
 {
@@ -29,13 +34,3 @@
     background: #fed700;
     color: #cd1e76;
 }
-/* @media (min-width: 600px) {
-    .search_box input {
-        display: block;
-    }
-}
-
-/* Alternativ styling när input ska visas 
-.search_box.show_input input {
-    display: block;
-} */
