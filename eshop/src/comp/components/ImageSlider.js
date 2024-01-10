@@ -35,14 +35,17 @@ const ImageSlider = ({ Filter, allcateFilter }) => {
     if (!Array.isArray(sliderImages) || sliderImages.length <= 0) {
         return null; // Om det inte finns några bilder, rendera ingenting
     }
+    
 
     return (
+        <div className="container">
         <section className="slider">
             <div className="left-arrow" onClick={prevSlide}>
                 <MdOutlineKeyboardDoubleArrowLeft />
             </div>
             <div className="right-arrow" onClick={nextSlide}>
                 <MdOutlineKeyboardDoubleArrowRight />
+            
             </div>
             {sliderImages.map((slide, index) => {
                 return (
@@ -63,6 +66,7 @@ const ImageSlider = ({ Filter, allcateFilter }) => {
                 );
             })}
         </section>
+        </div>
     );
 };
 

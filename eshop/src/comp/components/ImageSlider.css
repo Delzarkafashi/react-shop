@@ -1,3 +1,19 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* eller row, beroende på din design */
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 100%;
+}
+
 .slider {
     position: relative;
     width: 90%;
@@ -118,8 +134,10 @@
 }
 
 .product-info-text h1 {
-    margin-top: 50px; /* Justera som behövs, ger utrymme från toppen */
-    /* Lägg till ytterligare styling för h3 här om nödvändigt */
+    display: flex;
+    align-items: center; /* Centrera vertikalt */
+    justify-content: center; /* Centrera horisontellt */
+    margin-top: 50px;
     font-weight: 600;
 }
 
@@ -130,5 +148,53 @@
     max-width: 60%;
 }
 
+/* Mindre skärmar (max 768px) */
+@media (370px <= width <= 600px) {
+    .product-info-text h1 {
+        margin-top: -60px; /* Justera toppmarginalen på mindre skärmar */
+        height: 400px;
+    }
+    .product-info-text p {
+        margin-top: 100%;
+        overflow: auto;
+        max-width: 80%;
+        padding-bottom: 60px;
+        overflow: hidden; /* Dölj överflödig text */
+        white-space: nowrap; /* Hindra text från att brytas rad */
+        text-overflow: ellipsis; /* Visa "..." när texten är för lång */
+        max-width: 60%;
+       color: wheat
+    }
 
+    .image {
+        width: 750px; /* Behåll den önskade bildbredden */
+        height: 480px; /* Behåll den önskade bildhöjden */
+        max-width: 95%; /* Begränsa maxbredden till 100% av föräldraelementet */
+        border-radius: 0; /* Ta bort rundade hörn om så önskas */
+        margin: auto; /* Centrera bilden både vertikalt och horisontellt */
+        margin-top: -220px; /* Avstånd från toppen */
+        margin-bottom: 100px; /* Avstånd från botten */
+        padding-right: 0; /* Återställ högermarginalen om det behövs */
+        width: auto; /* Återställ bredden om det behövs */
+        left: 50%; /* Flytta bilden till mitten av sidan horisontellt */
+        transform: translateX(-50%); /* Centrera bilden horisontellt */
+        
+    }
 
+    .slide-text {
+        top: auto; /* Återställ vertikal position om det behövs */
+        left: 0; /* Ändra till vänster kant om det behövs */
+        right: 0; /* Centrera horisontellt på mindre skärmar */
+        transform: translate(0, 0); /* Återställ transformationen */
+        margin-top: 110%;
+    }
+
+    .product-info-text {
+        width: 100%; /* Ta upp hela bredden på mindre skärmar */
+        top: auto; /* Återställ vertikal position om det behövs */
+        left: 0; /* Ändra till vänster kant om det behövs */
+        right: 0; /* Centrera horisontellt på mindre skärmar */
+        transform: translate(0, 0); /* Återställ transformationen */
+        text-align: center; /* Centrera texten på mindre skärmar */
+    }
+}

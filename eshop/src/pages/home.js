@@ -88,7 +88,7 @@ const Home = ({addtocart,}) => {
 
 
         <div className="home">
-            <div><ImageSlider/></div>
+            <div ><ImageSlider/></div>
             <div className="top_banner">
                   <div className = "contant">
                   <h3>silver aluminum</h3>
