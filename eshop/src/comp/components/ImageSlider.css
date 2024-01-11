@@ -1,200 +1,133 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-.container {
-    display: flex;
-    flex-direction: column; /* eller row, beroende på din design */
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
-    padding: 0 15px;
-    max-width: 100%;
-}
-
-.slider {
-    position: relative;
-    width: 90%;
-    height: 500px; /* Höjd för slidern */
-    margin: 0 auto; /* Centrerar slidern */
-    overflow: hidden; /* Döljer icke-aktiva slides */
-    align-items: center; /* Centrerar innehåll vertikalt */
-    justify-content: center; /* Centrerar innehåll horisontellt */
-    transition: opacity 1s ease; /* Animering för att visa/ta bort slides */
-    padding-top: 20px;
-    padding-bottom: 20px;
-    
-}
-
-.left-arrow, .right-arrow {
-    position: absolute;
-    top: 50%;
-    cursor: pointer;
-    font-size: 48px; /* Storlek på pilen */
-    z-index: 10;
-    color: black; /* Färg på pilen */
-    transform: translateY(-50%) scaleY(1.5);
-    background-color: rgba(255, 255, 255, 0.3);
-    border-radius: 50%; /* Gör bakgrunden helt rund */
-    padding: 15px; /* Lägger till utrymme runt ikonen */
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.0); /* Valfrivis skugga för bättre djup */
-    
-    /* Centrera innehållet (pilen) inuti elementet */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    /* Lägg till bredd och höjd för att kontrollera storleken på den runda bakgrunden */
-    width: 80px;
-    height: 80px;
-}
-
-
-
-.left-arrow {
-    left: 10px;
-    color: violet;
-}
-
-.right-arrow {
-    right: 10px;
-    color: violet;
-}
-
-.slide {
-    width: 100%; /* Varje slide fyller hela bredden */
-    height: 500px; /* Höjd för varje slide */
-    position: absolute; /* Positioneras ovanpå varandra */
-    opacity: 0; /* Döljer alla slides som standard */
-    transition: opacity 1s ease; /* Animering för att visa/ta bort slides */
-    background-color: #c6ffe1;
-    overflow: visible;
-    
-}
-
-.slide.active {
-    opacity: 1; /* Visar den aktiva sliden */
-}
-
-.image {
-    width: 750px; /* Bildens bredd anpassas till föräldraelementets bredd */
-    height: 480px; /* Höjden justeras automatiskt för att behålla bildens aspektförhållande */
-    object-fit: cover; /* Ser till att hela bilden syns utan att tappa proportioner */
-    display: block;
-    margin: auto; /* Centrerar bilderna horisontellt */
-    position: absolute;
-    top: 50%; /* Flytta ner bilden till mitten av föräldern */
-    left: 70%; /* Flytta bilden till mitten på sidan  */
-    transform: translate(-50%, -50%); /* Centrerar både vertikalt och horisontellt */
-    border-top-left-radius: 350px;
-    border-bottom-left-radius: 350px;
-    margin-top: -9px;
-}
-.slide-text {
-    position: absolute;
-    top: 85%; /* Centrera vertikalt i förhållande till höjden */
-    left: 20%; /* Centrera horisontellt i förhållande till bredden */
-    transform: translate(-50%, -50%); /* Justerar exakt centrumpositionen */
-    color: white; /* Eller vilken färg du föredrar */
-    background-color: rgba(0, 0, 0, 0.5); /* Halvgenomskinlig svart bakgrund */
-    padding: 10px;
-    cursor: pointer; /* Visar en pekare för att indikera klickbarhet */
-    border-radius: 5px; /* Ger rundade hörn om så önskas */
-    text-align: center; /* Centrerar texten inom elementet */
-    /* Lägg till ytterligare styling efter behov */
-    z-index: 11;
-    font-weight: 600;
-}
-.slide-text:hover {
-    background-color: rgba(255, 255, 255, 0.8); /* Ljus bakgrund när musen är över */
-    color: blue; /* Ändra textfärg */
-}
-.product-info-text {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 40%; /* Tar upp halva bredden */
-    height: 100%; /* Full höjd */
-    padding: 20px; /* Lite utrymme inuti */
-    display: flex; /* Använder flex för att centrera innehållet */
-    align-items: center; /* Centrerar vertikalt */
-    justify-content: center; /* Centrerar horisontellt */
-    text-align: left; /* Texten börjar från vänster */
-    background-color: rgba(0, 0, 0, 0); /* Om du vill ha en bakgrund */
-    color: #161616; /* Textfärg */
-    z-index: 5; /* Se till att den inte täcks av andra element */
-    display: flex;
-    flex-direction: column; /* Staplar barn vertikalt */
-    align-items: center; /* Centrerar barn horisontellt */
-    justify-content: flex-start; /* Börjar från toppen */
-    text-align: center; /* Centrerar texten */
-    font-weight: 600;
-}
-
-.product-info-text h1 {
-    display: flex;
-    align-items: center; /* Centrera vertikalt */
-    justify-content: center; /* Centrera horisontellt */
-    margin-top: 50px;
-    font-weight: 600;
-}
-
-.product-info-text p {
-    /* Lägg till styling för p här om nödvändigt, exempelvis: */
-    margin-top: 40px; /* Ger utrymme mellan h3 och p */
-    overflow: auto;
-    max-width: 60%;
-}
-
-/* Mindre skärmar (max 768px) */
-@media (370px <= width <= 600px) {
-    .product-info-text h1 {
-        margin-top: -60px; /* Justera toppmarginalen på mindre skärmar */
-        height: 400px;
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
     }
-    .product-info-text p {
-        margin-top: 100%;
-        overflow: auto;
-        max-width: 80%;
-        padding-bottom: 60px;
-        overflow: hidden; /* Dölj överflödig text */
-        white-space: nowrap; /* Hindra text från att brytas rad */
-        text-overflow: ellipsis; /* Visa "..." när texten är för lång */
-        max-width: 60%;
-       color: wheat
+    
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0 15px;
+        max-width: 100%;
     }
-
+    
+    .slider {
+        position: relative;
+        width: 90vw; /* Responsiv bredd */
+        height: 50vh; /* Responsiv höjd */
+        margin: 0 auto;
+        overflow: hidden;
+        border: 2px solid #000000; /* Ram runt slidern */
+    }
+    
+    .left-arrow, .right-arrow {
+        position: absolute;
+        top: 50%;
+        cursor: pointer;
+        transform: translateY(-50%);
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 50%;
+        padding: 15px; /* Fast storlek */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        z-index: 10;
+        font-size: 24px; /* Fast storlek */
+    }
+    
+    .left-arrow {
+        left: 10px;
+    }
+    
+    .right-arrow {
+        right: 10px;
+    }
+    
+    .slide {
+        position: absolute;
+        width: 100%; /* Fyller hela bredden av slidern */
+        height: 100%; /* Fyller hela höjden av slidern */
+        opacity: 0;
+        transition: opacity 1s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #c6ffe1;
+    }
+    
+    .slide.active {
+        opacity: 1;
+    }
+    
     .image {
-        width: 750px; /* Behåll den önskade bildbredden */
-        height: 480px; /* Behåll den önskade bildhöjden */
-        max-width: 95%; /* Begränsa maxbredden till 100% av föräldraelementet */
-        border-radius: 0; /* Ta bort rundade hörn om så önskas */
-        margin: auto; /* Centrera bilden både vertikalt och horisontellt */
-        margin-top: -220px; /* Avstånd från toppen */
-        margin-bottom: 100px; /* Avstånd från botten */
-        padding-right: 0; /* Återställ högermarginalen om det behövs */
-        width: auto; /* Återställ bredden om det behövs */
-        left: 50%; /* Flytta bilden till mitten av sidan horisontellt */
-        transform: translateX(-50%); /* Centrera bilden horisontellt */
-        
+        width: calc(90% - 20%);  /* Responsiv bredd */
+        height: 100%; /* Behåller aspektförhållande */
+        object-fit: cover;
+         /* Rundade hörn på bilden */
+        border-top-left-radius: 350px;
+        border-bottom-left-radius: 350px;
+        margin-left: 30%; /* Lägger till 30% padding på vänster sida */
+        margin-right: 0%; 
     }
-
+    
     .slide-text {
-        top: auto; /* Återställ vertikal position om det behövs */
-        left: 0; /* Ändra till vänster kant om det behövs */
-        right: 0; /* Centrera horisontellt på mindre skärmar */
-        transform: translate(0, 0); /* Återställ transformationen */
-        margin-top: 110%;
+        z-index: 1001;
+        position: absolute;
+        bottom: 20px; 
+        left: 5%; 
+        width: 30%; 
+        padding: 20px 20px; 
+        color: white;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        text-align: left; 
+        font-size: 2vw; 
+        cursor: pointer;
     }
-
+    
+    
     .product-info-text {
-        width: 100%; /* Ta upp hela bredden på mindre skärmar */
-        top: auto; /* Återställ vertikal position om det behövs */
-        left: 0; /* Ändra till vänster kant om det behövs */
-        right: 0; /* Centrera horisontellt på mindre skärmar */
-        transform: translate(0, 0); /* Återställ transformationen */
-        text-align: center; /* Centrera texten på mindre skärmar */
+        position: absolute;
+        top: 20px; /* 20px från botten */
+        left: 5%; /* Flyttar texten till vänsterkanten */
+        width: 30%; /* Texten fyller 30% av föräldraelementets bredd */
+        padding: 20px 5px 20px 5px; /* 20px padding från toppen och botten, 5px från vänster och höger */
+        color: #161616;
+        background-color: rgba(0, 0, 0, 0.6);
+        border-radius: 5px;
+        text-align: center; /* Texten justeras till vänster */
+        font-size: 1.5vw; /* Responsiv fontstorlek */
+
     }
-}
+    
+    
+    /* Media queries för mindre skärmar */
+    @media screen and (max-width: 900px) {
+        .slider {
+            height: 40vh;
+        }
+    
+        .image {
+            max-width: 90%;
+        }
+    
+        .slide-text, .product-info-text {
+            font-size: 2vw;
+        }
+    }
+    
+    @media screen and (max-width: 580px) {
+        .slider {
+            height: 30vh;
+        }
+    
+        .image {
+            max-width: 100%;
+        }
+    
+        .slide-text, .product-info-text {
+            font-size: 2vw;
+        }
+    }
+    

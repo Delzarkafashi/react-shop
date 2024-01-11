@@ -1,0 +1,98 @@
+.top_banner
+{
+    max-width: 90%;
+    height: 35vh;
+    background: url("http://localhost:3000/image/slide-1.webp") no-repeat center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 5vw;
+    margin-left: auto; /* Lägger till för att centrera horisontellt */
+    margin-right: auto;
+    border: 2px solid #000000;
+}
+.top_banner .contant
+{
+    width: 100%;
+    position: relative;
+    top: 20%;
+    padding: 10px 50px;
+}
+.top_banner .contant h3
+{
+    text-transform: capitalize;
+    color: #cd1e76;
+    font-size: 2vw; 
+    letter-spacing: 1px;
+}
+.top_banner .contant h2 
+{
+    text-transform: uppercase;
+    color: #232323;
+    letter-spacing: 1px;
+    font-size: 4vw;
+    margin-top: 10px;
+}
+.top_banner .contant p
+{
+    color: #380303;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+.top_banner .contant .link
+{
+    padding: 1em 2em; /* Använd em eller rem för responsiva storlekar */
+    font-size: 1em;
+    background: #fed700;
+    color: #232323;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.top_banner .contant .link:hover
+{
+    color: #fed700;
+    background: #cd1e76;
+}
+/* För medelstora skärmar */
+@media screen and (max-width: 768px) {
+    .top_banner {
+        padding: 1vw; /* Mindre padding */
+        height: 30vh; /* Mindre höjd */
+        padding: 3vw;
+    }
+
+    .top_banner .contant h2 {
+        font-size: 3vw; /* Större fontstorlek för mindre skärmar */
+    }
+
+    .top_banner .contant h3, .top_banner .contant p {
+        font-size: 2vw;
+    }
+    .top_banner .contant .link {
+        padding: 0.8em 1.6em; /* Mindre padding */
+        font-size: 0.6em; /* Mindre fontstorlek */
+    }
+}
+
+/* För små skärmar */
+@media screen and (max-width: 480px) {
+    .top_banner {
+        padding: 1vw;
+        height: auto; /* Ännu mindre höjd */
+        padding: 2vw;
+    }
+
+    .top_banner .contant h2 {
+        font-size: 4vw;
+    }
+
+    .top_banner .contant h3, .top_banner .contant p {
+        font-size: 2vw;
+    }
+    .top_banner .contant .link {
+        padding: 0.7em 1.4em; /* Ännu mindre padding */
+        font-size: 0.6em; /* Ännu mindre fontstorlek */
+    }
+}
+

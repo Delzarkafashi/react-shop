@@ -57,7 +57,9 @@ const ImageSlider = ({ Filter, allcateFilter }) => {
                                     {slide.text}
                                 </div>
                                 <div className="product-info-text">
-                                    <h1>{slide.Name} - $ {slide.price}</h1>
+                                    <h1>{slide.Name} </h1>
+
+                                    <h2>${slide.price}:-</h2>
                                     <p>{slide.info}</p>
                                 </div>
                             </>

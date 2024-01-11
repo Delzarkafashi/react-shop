@@ -8,6 +8,7 @@ import Newsletter from "../comp/components/Newsletter";
 import WebDesignerDetail from "../comp/components/WebDesignerDetail";
 import ReklamssBox from "../comp/components/ReklamssBox";
 import TrendingProducts from "../comp/components/TrendingProducts";
+import TopBanner from "../comp/components/top_bannerWatch";
 const Home = ({addtocart,}) => {
     //product category
     const [newProduct, setNewProduct] = useState([])
@@ -89,14 +90,7 @@ const Home = ({addtocart,}) => {
 
         <div className="home">
             <div ><ImageSlider/></div>
-            <div className="top_banner">
-                  <div className = "contant">
-                  <h3>silver aluminum</h3>
-                  <h2>Apple Watch</h2>
-                  <p>30% off at your first odder</p>
-                  <Link to="/watch" className="link">Shop Now</Link>
-                </div>
-            </div>
+            <div><TopBanner/> </div>
             <div className="trending">
                 <div className="container">
                     <div className="left_box">
