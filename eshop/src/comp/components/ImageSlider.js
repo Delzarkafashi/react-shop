@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ImageSlider.css"; // Se till att denna fil innehåller korrekt CSS
-import { MdOutlineKeyboardDoubleArrowRight, MdOutlineKeyboardDoubleArrowLeft } from "react-icons/md";
+import { SlArrowRight, SlArrowLeft } from "react-icons/sl";
 import Homeproduct from "../home_product";
 
 const ImageSlider = ({ Filter, allcateFilter }) => {
@@ -41,11 +41,10 @@ const ImageSlider = ({ Filter, allcateFilter }) => {
         <div className="container">
         <section className="slider">
             <div className="left-arrow" onClick={prevSlide}>
-                <MdOutlineKeyboardDoubleArrowLeft />
+            <SlArrowLeft />
             </div>
             <div className="right-arrow" onClick={nextSlide}>
-                <MdOutlineKeyboardDoubleArrowRight />
-            
+            <SlArrowRight/>
             </div>
             {sliderImages.map((slide, index) => {
                 return (
@@ -57,10 +56,17 @@ const ImageSlider = ({ Filter, allcateFilter }) => {
                                     {slide.text}
                                 </div>
                                 <div className="product-info-text">
+                                    <div className="SlideName">
                                     <h1>{slide.Name} </h1>
+                                    </div>
 
+                                    {/* <div className="SlidePrice">
                                     <h2>${slide.price}:-</h2>
+                                    </div> */}
+
+                                    <div className="SlideInfo">
                                     <p>{slide.info}</p>
+                                    </div>
                                 </div>
                             </>
                         )}

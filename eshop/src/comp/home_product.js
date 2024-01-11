@@ -641,7 +641,7 @@ const Homeproduct =
         image: "image/S-tv-img.jpg",
         cat: "tv",
         type: "slider",
-        info: "If you're in the market for a new TV, it's essential to consider if the features match your needs. Think about if the size, resolution, and smart capabilities align with your viewing preferences. Also, if energy efficiency and connectivity options are important, ensure the TV supports them.",
+        info: "If you're in the market for a new TV.",
     },
     {
         Id: 1115,
@@ -650,7 +650,7 @@ const Homeproduct =
         image: "image/S-phone-img.jpg",
         cat: "phone",
         type: "slider",
-        info: "If you're in the market for a new phone, it's essential to consider if the features match your needs. Think about if the size, resolution, and smart capabilities align with your viewing preferences. Also, if energy efficiency and connectivity options are important, ensure the TV supports them.",
+        info: "If you're in the market for a new phone.",
     },
     {
         Id: 1116,
@@ -659,7 +659,7 @@ const Homeproduct =
         image: "image/S-headphones-img.jpg",
         cat: "headphones",
         type: "slider",
-        info: "If you're in the market for a new headphones, it's essential to consider if the features match your needs. Think about if the size, resolution, and smart capabilities align with your viewing preferences. Also, if energy efficiency and connectivity options are important, ensure the TV supports them.",
+        info: "If you're in the market for a new headphones.",
     },
     {
         Id: 1117,
@@ -668,7 +668,7 @@ const Homeproduct =
         image: "image/S-lap-img.png",
         cat: "laptop",
         type: "slider",
-        info: "If you're in the market for a new laptop, it's essential to consider if the features match your needs. Think about if the size, resolution, and smart capabilities align with your viewing preferences. Also, if energy efficiency and connectivity options are important, ensure the TV supports them.",
+        info: "If you're in the market for a new laptop.",
     },
     {
         Id: 1118,
@@ -677,7 +677,7 @@ const Homeproduct =
         image: "image/S-speaker-img.jpg",
         cat: "speaker",
         type: "slider",
-        info: "If you're in the market for a new speaker, it's essential to consider if the features match your needs. Think about if the size, resolution, and smart capabilities align with your viewing preferences. Also, if energy efficiency and connectivity options are important, ensure the TV supports them.",
+        info: "If you're in the market for a new speaker.",
     },
     {
         Id: 1119,
@@ -686,7 +686,7 @@ const Homeproduct =
         image: "image/S-clock-img.jpg",
         cat: "watch",
         type: "slider",
-        info: "If you're in the market for a new watch, it's essential to consider if the features match your needs. Think about if the size, resolution, and smart capabilities align with your viewing preferences. Also, if energy efficiency and connectivity options are important, ensure the TV supports them.",
+        info: "If you're in the market for a new watch.",
     },
     {
         Id: 1120,
@@ -695,7 +695,7 @@ const Homeproduct =
         image: "image/S-all-img.png",
         cat: "all",
         type: "slider",
-        info: "If you're in the market for a new watch, it's essential to consider if the features match your needs. Think about if the size, resolution, and smart capabilities align with your viewing preferences. Also, if energy efficiency and connectivity options are important, ensure the TV supports them.",
+        info: "If you're in the market for a new watch.",
     },
     
     
