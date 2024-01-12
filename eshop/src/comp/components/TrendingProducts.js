@@ -1,4 +1,3 @@
-// TrendingProducts.js
 import React from 'react';
 import { AiFillEye, AiFillHeart } from "react-icons/ai";
 import ShowMore from './buttons/ShowMore';

@@ -1,21 +1,15 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    box-sizing: border-box;
-}
-.AllHeader{
-    position: fixed; /* Fixerar headern på skärmen */
-    top: 0; /* Placerar headern högst upp på sidan */
-    left: 0; /* Linjerar headern längst till vänster på sidan */
-    width: 100%; /* Bredd sätts till 100% av skärmbredden */
-    z-index: 1000; /* Ser till att headern ligger över andra element */
-    background-color: #fff; /* Ger en bakgrundsfärg så den inte är genomskinlig */
-    /* Lägg till ytterligare stilar för headern här om det behövs */
-}
-.header
-{
-    width: 100%;
+.AllHeader {
+    position: fixed;
+    top: 0;
+    left: 5%; /* Sätter startpunkten till 5% från vänster */
+    width: 90%; /* Bredd sätts till 90% av skärmbredden */
+    z-index: 1000;
+    background-color: #fff;
+    border: 1px solid #000000;
+
+    display: flex; /* Använder flexbox */
+    justify-content: center; /* Centrerar innehållet horisontellt */
+    align-items: center; /* Centrerar innehållet vertikalt */
 }
 .header .top_header
 {
@@ -23,6 +17,10 @@
     display: flex;
     padding: 10px 10xp;
     background: #f6f7f9;
+}
+.header
+{
+    width: 90%;
 }
 .header .top_header .icon
 {
@@ -38,7 +36,7 @@
 .header .mid_header
 {
     display: flex;
-    padding: 20px 40px;
+    padding: 20px;
     max-width: 100%;
     justify-content: space-between;
     align-items: center;
@@ -67,11 +65,10 @@
 .header .last_header
 {
     display: flex;
-    justify-content: center;
-    width: 100%;
     background: #c6ffe1;
     justify-content: space-between;
     height: 30px;
+    padding: 0 30px;
 }
 .header .last_header .user_profile
 {

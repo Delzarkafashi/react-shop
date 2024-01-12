@@ -1,7 +1,8 @@
 .trending
 {
-    padding: 20px 30px;
+    
     width: 100%;
+    border: 1px solid #000000;
 }
 .trending .container
 {
@@ -16,10 +17,12 @@
 .trending .container .left_box .header
 {
     display: flex;
-    max-width: 100%;
+    max-width: 75%;
     padding: 10px 10px;
-    background: #f6f7f8;
+    background: #989898;
     justify-content: space-between;
+    margin-left: auto; /* Centrerar elementet horisontellt genom att sätta vänstermarginal till auto */
+    margin-right: auto;
 }
 .trending .container .left_box .header .heading h2
 {
@@ -225,3 +228,68 @@
     font-size: 14px;
     margin-bottom: 20px;
 }
+
+@media (max-width: 768px) {
+    .trending .container .left_box {
+        width: 100%; /* Justera bredden för mindre skärmar */
+        padding: 2% 3%;
+    }
+
+    .trending .container .left_box .header {
+        max-width: 100%; /* Redan procentuellt */
+        padding: 2% 3%; /* Exempel på procentuell padding */
+      }
+      
+      .trending .container .left_box .products .container .box {
+        width: 48%; /* Till exempel för två kolumner, inklusive någon marginal */
+        margin: 1%; /* Procentuell marginal */
+      }
+      .trending .container .left_box .header .heading h2 {
+        font-size: 0.7em; /* Anpassningsbar storlek */
+      }
+      .trending .container .left_box .header .cate h3 {
+        font-size: 0.7em; /* Anpassningsbar storlek */
+      }
+      
+      
+
+    .trending .container .right_box {
+        width: 100%; /* Justera bredden för mindre skärmar */
+    }
+
+    .trending .container {
+        display: flex;
+        flex-wrap: wrap;
+        /* ... övriga stilar ... */
+    }
+    .trending .container .left_box .products .container .box {
+        width: 250px; /* Justera bredden för mindre skärmar */
+        margin-left: 1%; /* Justera marginalerna */
+        margin-right: 1%;
+        /* ... övriga stilar ... */
+    }
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        grid-gap: 10px;
+    }
+    
+    .trending .container .left_box .products .container .box .img_box .icon {
+        /* Justera stilarna för mindre skärmar */
+        margin-left: 0; /* Exempel */
+        flex-direction: column;
+        /* Andra nödvändiga justeringar */
+    }
+    .trending .container .left_box .products .container .box:hover .img_box .icon {
+        margin-left: 0; /* Inaktivera hover-effekten som flyttar ikonen */
+    }
+
+    .trending .container .left_box .products .container .box .img_box .icon {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0; /* Säkerställ att ikonen alltid är synlig */
+        margin-top: 10px;
+        /* Andra nödvändiga justeringar */
+    }
+}
+

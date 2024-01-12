@@ -1,7 +1,8 @@
 .product_detail
 {
-    width: 900px;
-    height: 500px;
+    max-width: 90%; /* Maximal bredd */
+    width: auto; /* Automatisk bredd baserad på innehåll */
+    height: auto; /* Höjd baserad på innehåll */
     position: fixed;
     top: 100px;
     left: 170px;
@@ -89,4 +90,34 @@ li {
     font-size: 14;
     font-weight: 600;
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .product_detail {
+        max-width: 95%; /* Öka bredden på mindre skärmar */
+        padding: 10px; /* Minska padding på mindre skärmar */
+        top: 10px; /* Mindre vertikal marginal */
+        left: 2.5%; /* Mindre marginal från vänster */
+        transform: translateX(0); /* Ingen horisontell centrering krävs */
+    }
+
+    .product_detail .container .img_box img {
+        width: 100%; /* Anpassa bildbredden */
+        height: auto; /* Bibehåll bildens proportioner */
+    }
+
+    .product_detail .container {
+        flex-direction: column; /* Stapla innehåll vertikalt */
+    }
+
+    .product_detail .container .info {
+        margin-top: 20px;
+        margin-left: 0;
+    }
+    .product_detail .container .img_box img {
+        max-width: 100%; /* Maximal bredd */
+        height: auto; /* Bibehåll proportionerna */
+    }
+    
+    /* Anpassa andra stilar efter behov */
 }

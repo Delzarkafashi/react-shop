@@ -9,6 +9,7 @@
     margin-left: auto; /* Lägger till för att centrera horisontellt */
     margin-right: auto;
     border: 2px solid #000000;
+    margin-top: 20px; /* Lägger till utrymme på toppen */
 }
 .top_banner .contant
 {

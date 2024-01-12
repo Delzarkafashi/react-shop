@@ -38,7 +38,7 @@ const ImageSlider = ({ Filter, allcateFilter }) => {
     
 
     return (
-        <div className="container">
+        <div className="container-slider">
         <section className="slider">
             <div className="left-arrow" onClick={prevSlide}>
             <SlArrowLeft />
