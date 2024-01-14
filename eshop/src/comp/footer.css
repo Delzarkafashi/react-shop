@@ -1,92 +1,102 @@
 .parent-footer {
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr); 
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
-.parent-footer
-{
-    margin-left: 10px;
+.gorila-footer{
+    height: auto;
+    width: 25%;
 }
 .parent-footer .detail-footer h3
 {
     text-transform: uppercase;
-    font-size: 100%px;
+    font-size: 100%;
     color: #cd1e76;
     font-weight: 600;
 }
 .parent-footer .detail-footer p
 {
-    font-size: 100%px;
+    font-size: 100%;
     color: #232323;
 }
-.div1-footer { grid-area: 1 / 1 / 2 / 4; 
-    padding: 0 10%;
+.div1-footer { grid-area: 1 / 1 / 2 / 2; 
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
+    width: 80%; 
+    height: 90%; 
+    padding: 10px; 
+    border: solid 1px #cd1e7500; 
+}
+.div2-footer { grid-area: 1 / 2 / 2 / 3; 
+    display: flex;
+    flex-direction: row;
+    width: 100%; 
+    height: 90%; 
+    padding: 10px; 
+    border: solid 1px #cd1e7500; 
+}
+.div3-footer { grid-area: 1 / 3 / 2 / 4; 
+    display: flex;
+    flex-direction: row;
+    width: 100%; 
+    height: 90%; 
+    padding: 10px; 
+    border: solid 1px #cd1e7500; 
  }
-.div2-footer { grid-area: 2 / 1 / 3 / 4; 
-    padding: 0 10%;
+.div4-footer { grid-area: 1 / 4 / 2 / 5; 
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
+    width: 80%; 
+    height: 90%; 
+    padding: 10px; 
+    border: solid 1px #cd1e7500; 
 }
-.div3-footer { grid-area: 3 / 1 / 4 / 4; 
-    padding: 0 10%; 
+.div5-footer { grid-area: 2 / 1 / 3 / 2; }
+.div6-footer { grid-area: 2 / 2 / 4 / 4; 
     display: flex;
-    flex-direction: row; 
-}
-.div4-footer { grid-area: 4 / 1 / 5 / 4; 
-    padding: 0 10%; 
-    display: flex;
-    flex-direction: row; }
-.div5-footer {
-    grid-area: 4 / 4 / 6 / 6;
-    display: flex;
-    flex-direction: column; 
     align-items: center; 
-    justify-content: flex-start;
-    gap: 1%;
-}   
-.div5-footer ul,.div6-footer ul, .div7-footer ul {
-    list-style: none; /* Tar bort listmarkörer */
-    padding: 0; /* Tar bort standardpadding */
-    margin: 0; /* Tar bort standardmarginal */
-    width: 100%; /* Sätter bredden på listan */
-    text-align: center; /* Centrerar texten inom listan */
-}
+    justify-content: center; 
+    text-align: center; 
+    height: 100%; 
+    width: 100%;}
+.div7-footer { grid-area: 2 / 4 / 3 / 5; }
+.div8-footer { grid-area: 3 / 1 / 4 / 2; }
+.div9-footer { grid-area: 3 / 4 / 4 / 5; }
+.div10-footer { grid-area: 4 / 1 / 5 / 2;
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    width: 90%; 
+    text-align: center;}
+.div11-footer { grid-area: 4 / 2 / 5 / 3;
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    width: 90%; 
+    text-align: center; }
+.div12-footer { grid-area: 4 / 3 / 5 / 4;
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    width: 90%; 
+    text-align: center; }
+.div13-footer { grid-area: 4 / 4 / 5 / 5; 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    width: 90%; 
+    text-align: center;}
+.div14-footer { grid-area: 5 / 1 / 6 / 5;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    height: 100%; 
+    width: 100%; } 
 
-.div6-footer { grid-area: 4 / 6 / 6 / 8;   
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: flex-start;
-    gap: 1%;
- }
-.div7-footer { grid-area: 4 / 8 / 6 / 10; 
-    display: flex;
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: flex-start;
-    gap: 1%;
-}
-.div5-footer ul,.div6-footer ul, .div7-footer ul {
-    list-style: none; /* Tar bort listmarkörer */
-    padding: 0; /* Tar bort standardpadding */
-    margin: 0; /* Tar bort standardmarginal */
-    width: 100%; /* Sätter bredden på listan */
-    text-align: center; /* Centrerar texten inom listan */
-}
-.div8-footer { grid-area: 1 / 4 / 3 / 10; }
-.div9-footer { grid-area: 3 / 4 / 4 / 10; }
-.div10-footer { grid-area: 5 / 1 / 6 / 4; }
 
-.box-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
 
 .icon_box {
     /* Lägg till stilar för ikonernas behållare här */
@@ -96,3 +106,29 @@
     /* Lägg till stilar för detaljtexten här */
 }
 
+@media (max-width: 768px) { /* Justera detta värde baserat på dina behov */
+
+    
+     .parent-footer .detail-footer h3
+     {
+       text-transform: uppercase;
+        font-size: 60%;
+        color: #cd1e76;
+        font-weight: 600;
+       }
+     .parent-footer .detail-footer p
+      {
+         font-size: 80%;
+         color: #232323;
+       }
+       .gorila-footer{
+        height: auto;
+        width: 100%;
+       }
+       .div10-footer, .div11-footer, .div12-footer, .div13-footer {
+        font-size: 80%;
+        padding: 5px; 
+    }
+       
+        
+}

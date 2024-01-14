@@ -1,43 +1,42 @@
-.logo {
+.gorila-Header {
     display: flex;
-    align-items: center;
-    gap: 10px;
+    align-items: center; 
+    justify-content: center; 
 }
 
-.logo a {
-    text-decoration: none; /* Tar bort standard textdekoration från länkar */
-    color: inherit; /* Arv färg från parent, ändra efter behov */
-    display: flex; /* Gör så att innehållet linjeras sida vid sida */
-    align-items: center; /* Centrerar innehållet vertikalt */
+.gorila-Header a {
+    display: flex;
+    align-items: center; 
+    text-decoration: none; 
+    color: inherit; 
 }
 
-.logo img {
-    cursor: pointer;
-    object-fit: cover;
-    height: 50px; /* Justera efter behov */
-}
-
-.logo h2 {
-    margin: 0; /* Tar bort standardmarginalen från h2 */
-    cursor: pointer;
+.gorila-Header img {
     width: 100px;
-    font-family: 'Arial', sans-serif; /* Ändrar typsnittet */
-    font-size: 24px; /* Ändrar textstorleken */
-    font-weight: bold; /* Gör texten fet */
-    font-style: italic; /* Gör texten kursiv */
-    color: #151515; /* Ändrar textfärgen */
+    height: auto; 
+    margin-right: 2%; 
 }
 
-.logo a:hover img {
-    opacity: 0.8; /* Exempel på hover-effekt för bild */
+.gorila-Header h2 {
+    margin: 0;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif; 
+    font-size: 1.5em; 
+    font-weight: bold;
+    font-style: italic; 
+    color: #151515; 
 }
 
-.logo a:hover h2 {
-    color: blue; /* Ändrar textfärgen till blått vid hover */
+.gorila-Header a:hover img {
+    opacity: 0.8;
 }
-/* Media Query */
+
+.gorila-Header a:hover h2 {
+    color: blue;
+}
+
 @media (max-width: 600px) {
-    .logo h2 {
-        display: none;
+    .gorila-Header h2 {
+        display: none; 
     }
 }

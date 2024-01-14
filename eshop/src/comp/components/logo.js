@@ -4,10 +4,10 @@ import "./logo.css"
 
 const Logo = () => {
     return (
-        <div className="logo">
+        <div className="gorila-Header">
             <Link to="/">
                 <img src="image/logo gorila.png" alt="logo"></img>
-                <h2>välkommen till oss</h2>
+                <h2>Gorilla Familjen</h2>
             </Link>
         </div>
     );

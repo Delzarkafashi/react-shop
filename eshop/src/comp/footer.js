@@ -43,7 +43,26 @@ const Footer = () => {
                     <p>Lorem ipsum dolor sit amet.</p>
                 </div>
             </div>
-            <div className="div5-footer">
+            {/* <div className="div5-footer"></div> */}
+            <div className="div6-footer">
+                <div className="header">
+                    <img className="gorila-footer" src="image/logo gorila.png" alt="" />
+                    <h1 className="Logo-Name">Gorilla Familjen</h1>
+                </div>
+                
+            </div>
+            {/* <div className="div7-footer"></div>
+            <div className="div8-footer"></div>
+            <div className="div9-footer"></div> */}
+            <div className="div10-footer">
+                <h3>Contact us</h3>
+                <ul>
+                    <li>Lorem ipsum dolor sit amet.</li>
+                    <li>0709224098</li>
+                    <li>info@gmail.com</li>
+                </ul>
+            </div>
+            <div className="div11-footer">
                 <h3>Your Account</h3>
                 <ul>
                     <li>About us</li>
@@ -52,7 +71,7 @@ const Footer = () => {
                     <li>Sales</li>
                 </ul>
             </div>
-            <div className="div6-footer">
+            <div className="div12-footer">
                 <h3>Products</h3>
                 <ul>
                     <li>Delivery</li>
@@ -61,7 +80,7 @@ const Footer = () => {
                     <li>Old product</li>
                 </ul>
             </div>
-            <div className="div7-footer">
+            <div className="div13-footer">
                 <h3>Contact us</h3>
                 <ul>
                     <li>Lorem ipsum dolor sit amet.</li>
@@ -69,12 +88,8 @@ const Footer = () => {
                     <li>info@gmail.com</li>
                 </ul>
             </div>
-            <div className="div8-footer">
-                <div className="header">
-                    <img src="image/logo.webp" alt="" />
-                </div>
-            </div>
-            <div className="div9-footer">
+            
+            <div className="div14-footer">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem mollitia, illum labore reprehenderit illo nisi.</p>
             </div>
         </div>
