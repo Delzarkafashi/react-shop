@@ -4,14 +4,18 @@ import './top_bannerWatch.css';
 
 const TopBanner = () => {
     return (
-        <div className="top_banner">
-            <div className="contant">
-                <h3>silver aluminum</h3>
-                <h2>Apple Watch</h2>
-                <p>30% off at your first order</p>
-                <Link to="/watch" className="link">Shop Now</Link>
+ 
+            <div className="parent-Top-Banner">
+                <div className="div1-Bakgrund">
+                    <div className="div2-Contant"> 
+                        <h3 className='h3-Top-Banner'>silver aluminum</h3>
+                        <h2 className='h2-Top-Banner'>Apple Watch</h2>
+                        <p className='p-Top-Banner'>30% off at your first order</p>
+                        <Link to="/watch" className="link-Top-Banner">Shop Now</Link>
+                    </div>
+                </div>
             </div>
-        </div>
+            
     );
 };
 

@@ -22,7 +22,7 @@ const Nav = ({search, setSearch, searchproduct}) => {
                 <MdLocalShipping />
                 </div>
                 <div className="info">
-                    <p>Free shipping when shopping upto $1000</p>
+                    <p className="p-nav-inf">Free shipping when shopping upto $1000</p>
                 </div>
             </div>
             <div className="div2-Header">
