@@ -57,7 +57,10 @@
         }
         .div6-Header .icon {
             font-size: 15px;
-            height: 16px;
+            height: 17px;
+        }
+        .div6-Header p {
+            font-size: 70%; /* Ställer in textstorleken till 120% av föräldraelementets fontstorlek */
         }
      .div7-Header { grid-area: 4 / 1 / 5 / 3; }
      .div8-Header { grid-area: 4 / 3 / 5 / 5; 
