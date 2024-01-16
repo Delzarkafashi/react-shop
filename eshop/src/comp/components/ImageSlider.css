@@ -3,6 +3,74 @@
         margin: 0;
         padding: 0;
     }
+    .slide {
+        display: grid;
+        grid-template-columns: repeat(9, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        position: absolute;
+        width: 100%; /* Fyller hela bredden av slidern */
+        height: 100%; /* Fyller hela höjden av slidern */
+        opacity: 0;
+        transition: opacity 1s ease;
+        align-items: center;
+        justify-content: center;
+        background-color: #c6ffe1;
+        }
+        
+        .image { grid-area: 1 / 4 / 9 / 10; 
+            height: 100%; /* Behåller aspektförhållande */
+            object-fit: cover;
+             /* Rundade hörn på bilden */
+            border-top-left-radius: 350px;
+            border-bottom-left-radius: 350px;
+        }
+        .slide-text { grid-area: 7 / 2 / 8 / 4; 
+            border: 1px solid #000; /* svart ram */
+            z-index: 10;
+            width: auto; 
+            color: #161616;
+            background-color: rgba(56, 55, 55, 0.6);
+            border-radius: 5px;
+            text-align: center; 
+            font-size: 2vw;
+            height: auto;
+            cursor: pointer;
+            }
+        .product-info-text { grid-area: 2 / 2 / 7 / 4; 
+            color: #16161600;
+            background-color: rgba(0, 0, 0, 0.223);
+            border-radius: 5px;
+            text-align: center; /* Texten justeras till vänster */
+            font-size: 3vw; /* Responsiv fontstorlek */
+            cursor: pointer;
+            overflow: hidden; /* Dölj överskjutande text */}
+        .SlideName { grid-area: 2 / 2 / 3 / 4; 
+        border: 1px solid #00000000; /* svart ram */
+        width: auto; 
+        color: #161616;
+        background-color: rgba(56, 55, 55, 0);
+        border-radius: 5px;
+        font-size: 2vw;
+        height: auto;
+        }
+        .SlidePrice { grid-area: 3 / 2 / 4 / 4; 
+            text-align: center; 
+            font-size: 1.5vw;}
+        .SlideInfo { grid-area: 4 / 2 / 7 / 4; 
+            border: 1px solid #00000000; /* svart ram */
+            width: auto; 
+            color: #161616;
+            background-color: rgba(0, 0, 0, 0);
+            border-radius: 5px;
+            text-align: center; 
+            font-size: 1.5vw;
+            height: auto;
+        }
+        .div7 { grid-area: 4 / 1 / 6 / 2; }
+        .div8 { grid-area: 4 / 9 / 6 / 10; }
+        
     
     .container-slider {
         position: relative;
@@ -50,139 +118,26 @@
     }
     
     
-    .slide {
-        position: absolute;
-        width: 100%; /* Fyller hela bredden av slidern */
-        height: 100%; /* Fyller hela höjden av slidern */
-        opacity: 0;
-        transition: opacity 1s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #c6ffe1;
-    }
+
     
     .slide.active {
         opacity: 1;
     }
-    
-    .image {
-        width: calc(90% - 20%);  /* Responsiv bredd */
-        height: 100%; /* Behåller aspektförhållande */
-        object-fit: cover;
-         /* Rundade hörn på bilden */
-        border-top-left-radius: 350px;
-        border-bottom-left-radius: 350px;
-        margin-left: 30%; /* Lägger till 30% padding på vänster sida */
-        margin-right: 0%; 
+
+    .SlideName h1{
+        text-transform: uppercase;
+        color: #232323;
+        font-size: 1.7em;
+    }
+    .SlidePrice h2{
+        text-transform: uppercase;
+        color: #232323;
+        font-size: 1em;
     }
 
-    
-    
-    .product-info-text {
-        position: absolute;
-        height: 70%;
-        top: 40px; /* 20px från botten */
-        left: 6%; /* Flyttar texten till vänsterkanten */
-        bottom: 20%;
-        width: 30%; /* Texten fyller 30% av föräldraelementets bredd */
-        padding: 20px 5px 20px 5px; /* 20px padding från toppen och botten, 5px från vänster och höger */
-        color: #16161600;
-        background-color: rgba(0, 0, 0, 0.223);
-        border-radius: 5px;
-        text-align: center; /* Texten justeras till vänster */
-        font-size: 3vw; /* Responsiv fontstorlek */
-        cursor: pointer;
-        overflow: hidden; /* Dölj överskjutande text */
+    .SlideInfo p {
+        text-transform: uppercase;
+        color: #232323;
+        font-size: 1.2em;
     }
-    .SlideName {
-        border: 1px solid #00000000; /* svart ram */
-        width: auto; 
-        color: #161616;
-        background-color: rgba(56, 55, 55, 0);
-        border-radius: 5px;
-        font-size: 2vw;
-        height: auto;
-    }
-    .SlideName h1 {
-        margin: 0; /* ta bort marginal för h1 */
-        
-    }
-    .slide-text
-    {
-        border: 1px solid #000; /* svart ram */
-        z-index: 10;
-        position: absolute;
-        left: 10%; 
-        width: auto; 
-        color: #161616;
-        background-color: rgba(56, 55, 55, 0.6);
-        border-radius: 5px;
-        text-align: center; 
-        font-size: 2vw;
-        height: auto;
-        cursor: pointer;
-        bottom: 40px;
-    }
-    .SlideInfo {
-        border: 1px solid #00000000; /* svart ram */
-        z-index: 1003;
-        position: absolute; 
-        width: auto; 
-        color: #161616;
-        background-color: rgba(0, 0, 0, 0);
-        border-radius: 5px;
-        text-align: center; 
-        font-size: 2vw;
-        height: auto;
-        bottom: 40px;
-        top: 50%;
-    }
-    
-    
-    
-    
-    /* Media queries för mindre skärmar */
-    @media screen and (max-width: 1000px) {
-        .slider {
-            height: 40vh;
-        }
-    
-        .image {
-            max-width: 90%;
-        }
-        .product-info-text {
-            font-size: 3vw;
-            bottom: 20%;
-        }
-        .left-arrow, .right-arrow {
-            height: 8vw; /* mindre höjd för mindre skärmar */
-            font-size: 4vw; /* mindre fontstorlek för mindre skärmar */
-        }
-    }
-    
-    @media screen and (max-width: 580px) {
-        .left-arrow, .right-arrow {
-            height: 10vw; /* ännu mindre höjd för mycket små skärmar */
-            font-size: 10vw; /* ännu mindre fontstorlek för mycket små skärmar */
-        }
-    }
-    
-    /* @media screen and (max-width: 580px) {
-        .slider {
-            height: 30vh;
-        }
-    
-        .image {
-            max-width: 100%;
-        }
-    
-        .slide-text{
-            font-size: 2vw;
-        } 
-        .product-info-text {
-            font-size: 2vw;
-            bottom: 20%;
-        }
-    } */
-    
+

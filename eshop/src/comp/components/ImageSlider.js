@@ -56,18 +56,19 @@ const ImageSlider = ({ Filter, allcateFilter }) => {
                                     {slide.text}
                                 </div>
                                 <div className="product-info-text">
-                                    <div className="SlideName">
+                                    
+                                </div>
+                                <div className="SlideName">
                                     <h1>{slide.Name} </h1>
                                     </div>
 
-                                    {/* <div className="SlidePrice">
+                                    <div className="SlidePrice">
                                     <h2>${slide.price}:-</h2>
-                                    </div> */}
+                                    </div>
 
                                     <div className="SlideInfo">
                                     <p>{slide.info}</p>
                                     </div>
-                                </div>
                             </>
                         )}
                     </div>
